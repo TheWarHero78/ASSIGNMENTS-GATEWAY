@@ -21,7 +21,7 @@ namespace Validations.Models
         public string UserEmail { get; set; }
 
         [Display(Name = "Date of Joining")] 
-     
+        [Required(ErrorMessage = "Please enter Date of Joining")]
         public Nullable<System.DateTime> DOJ { get; set; }
 
         [DataType(DataType.Password)]
