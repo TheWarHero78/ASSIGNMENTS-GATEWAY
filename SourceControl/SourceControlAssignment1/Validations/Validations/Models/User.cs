@@ -33,7 +33,7 @@ namespace Validations.Models
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Confirm Password is Required")]
         [Compare("Password", ErrorMessage = "Password and Confirm Password do not match")]
-        [MinLength(6), MaxLength(10)]
+        [MinLength(6), MaxLength(8)]
         [Display(Name = "Confirm Password")]
         public string ConfirmPassword  { get; set; }
 
