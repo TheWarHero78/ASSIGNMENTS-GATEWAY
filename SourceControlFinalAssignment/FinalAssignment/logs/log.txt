@@ -1,0 +1,6 @@
+ERROR 2020-12-12 19:02:56,990 15100ms UsersController        Create             – Attempted to divide by zero.
+ERROR 2020-12-12 19:17:31,574  9862ms UsersController        Create             – Attempted to divide by zero.
+ERROR 2020-12-12 19:20:06,776 12221ms UsersController        Create             – Attempted to divide by zero.
+System.DivideByZeroException: Attempted to divide by zero.
+   at FinalAssignment.Controllers.UsersController.Create(UserMetaData MyUser) in C:\Users\ASUS\source\repos\FinalAssignment\FinalAssignment\Controllers\UsersController.cs:line 61
+INFO  2020-12-17 12:18:57,350 15907ms UsersController        Login              – Login Successfull for Rameswar Shyam
