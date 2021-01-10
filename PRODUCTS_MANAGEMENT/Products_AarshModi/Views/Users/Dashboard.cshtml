@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+<div class="container text-center">
+
+        <div class="card">
+            <div class="card-header">
+                <h2>
+                    Welcome  <b>@Session["FullName"].ToString() !! </b>
+                </h2>
+            </div>
+            <div class="card-body">
+                @if (Session["FullName"] != null)
+                {
+                    <p>Name: @Session["FullName"].ToString()</p>
+                    <p>Email: @Session["Email"].ToString()</p>
+                    
+                }
+            </div>
+        </div>
+</div>
+

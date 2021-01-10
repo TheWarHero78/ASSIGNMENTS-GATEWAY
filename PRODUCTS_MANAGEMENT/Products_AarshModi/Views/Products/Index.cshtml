@@ -1,0 +1,335 @@
+﻿@model IEnumerable<Products_AarshModi.Models.Product>
+<link href="~/Content/font-awesome.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#checkBoxAll').click(function () {         
+            $("input[name='chkID']").prop('checked', $(this).prop('checked'));
+        });
+    });
+</script>
+<script>
+     function gettoken() {
+        var token = '@Html.AntiForgeryToken()';
+        token = $(token).val();
+        return token;
+   }
+    var ConfirmDelete = function (EmployeeId) {
+
+        $("#hiddenEmployeeId").val(EmployeeId);
+        console.log("hello");
+        $("#myModal").modal('show');
+
+    }
+   
+    var DeleteProduct = function () {
+
+        $("#loaderDiv").show();
+
+        var empId = $("#hiddenEmployeeId").val();
+        var smallimg = $("#smallimg_" + empId).val();
+        console.log("sm" + smallimg);
+        var largeimg = $("#largeimg_" + empId).val();
+        console.log("la" + largeimg);
+
+        console.log("hello2");
+        $.ajax({
+            url: "/Products/Delete/" + empId,
+            type: "POST",
+            cache: false,
+            data: { __RequestVerificationToken: gettoken(), smallImage: smallimg, largeimage:largeimg },
+            success: function (result) {
+                $("#loaderDiv").hide();
+                // $("#myModal").modal("hide");
+                $("#btncan").hide();
+                $("#btncon").hide();
+                $("#test").text(empId +" Deleted Successfully !!");
+                $("#row_" + empId).remove();
+
+            },
+            error: function (result) {
+                $("#loaderDiv").hide();           
+                $("#btncan").hide();
+                $("#btncon").hide();
+                $("#test").text("There was a problem deleting item <br> Please Try Again !!");
+            }
+
+        })
+
+    }
+</script>
+<h2>Index</h2>
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title">Delete Product</h3>
+            </div>
+            <div class="modal-body" id="loaderDiv">
+                <h4>Are you sure ? You want to delete this. </h4>
+
+                <div style="text-align:center;display:none">
+                    <img src="~/Content/InternetSlowdown_Day.gif" width="150" />
+                </div>
+              
+            </div>
+           
+                <h4 id="test" align="center"></h4>
+            
+            <div class="modal-footer">
+                <a href="#" class="btn btn-default" id="btncan" data-dismiss="modal">Cancel</a>
+                <a href="#" class="btn btn-success" id="btncon" onclick="DeleteProduct()">Confirm</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+@*hidden field for storing current productId*@
+<input type="hidden" id="hiddenEmployeeId" />
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+</p>
+
+@using (Html.BeginForm("Index", "Products", FormMethod.Post))
+{
+    <p>
+        Find by name: @Html.TextBox("search", @ViewBag.search as string, new { htmlAttributes = new { @class = "form-control mr-1", @placehoder = "Search" } })
+        <input type="submit" class="btn btn-primary" value="Search" />
+    </p>
+
+    <p>
+
+
+        <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure? You want to Delete ?')" />
+    </p>
+
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>
+                <input type="checkbox" id="checkBoxAll" class="form-control" />
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SmallImage)
+            </th>
+            <th>
+                @if (ViewBag.IconClass == "fa-sort-amount-desc")
+                {
+                    @Html.ActionLink("Category Name", "Index", new { SortColumn = "CategoryName", IconClass = "fa-sort-amount-asc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "CategoryName")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+                else
+                {
+                    @Html.ActionLink("Category Name", "Index", new { SortColumn = "CategoryName", IconClass = "fa-sort-amount-desc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "CategoryName")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+
+            </th>
+            <th style="width:10%">
+                @if (ViewBag.IconClass == "fa-sort-amount-desc")
+                {
+                    @Html.ActionLink("Product ID", "Index", new { SortColumn = "ProductID", IconClass = "fa-sort-amount-asc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "ProductID")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+                else
+                {
+                    @Html.ActionLink("Product ID", "Index", new { SortColumn = "ProductID", IconClass = "fa-sort-amount-desc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "ProductID")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+            </th>
+            <th>
+                @if (ViewBag.IconClass == "fa-sort-amount-desc")
+                {
+                    @Html.ActionLink("Product Name", "Index", new { SortColumn = "ProductName", IconClass = "fa-sort-amount-asc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "ProductName")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+                else
+                {
+                    @Html.ActionLink("Product Name", "Index", new { SortColumn = "ProductName", IconClass = "fa-sort-amount-desc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "ProductName")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+
+            </th>
+            <th>
+                @if (ViewBag.IconClass == "fa-sort-amount-desc")
+                {
+                    @Html.ActionLink("Price", "Index", new { SortColumn = "Price", IconClass = "fa-sort-amount-asc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "Price")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+                else
+                {
+                    @Html.ActionLink("Price", "Index", new { SortColumn = "Price", IconClass = "fa-sort-amount-desc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "Price")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+            </th>
+            <th>
+                @if (ViewBag.IconClass == "fa-sort-amount-desc")
+                {
+                    @Html.ActionLink("Quantity", "Index", new { SortColumn = "Quantity", IconClass = "fa-sort-amount-asc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "Quantity")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+                else
+                {
+                    @Html.ActionLink("Quantity", "Index", new { SortColumn = "Quantity", IconClass = "fa-sort-amount-desc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "Quantity")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+
+            </th>
+            <th>
+                @if (ViewBag.IconClass == "fa-sort-amount-desc")
+                {
+                    @Html.ActionLink("Short Description", "Index", new { SortColumn = "ShortDescription", IconClass = "fa-sort-amount-asc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "ShortDescription")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+                else
+                {
+                    @Html.ActionLink("Short Description", "Index", new { SortColumn = "ShortDescription", IconClass = "fa-sort-amount-desc", PageNo = "1" })
+                    if (ViewBag.SortColumn == "ShortDescription")
+                    {
+                        <i class="fa @ViewBag.IconClass"></i>
+                    }
+                }
+
+            </th>
+
+
+
+            <th>Operation</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr id="row_@item.ProductID">
+                <td>
+
+                    <input type="checkbox" name="chkID" id="chkID" value="@item.ProductID" class="form-control" />
+                </td>
+                <td>
+
+                    <img src="~/ImageUploads/SmallProductsImage/@Url.Content(item.SmallImage)" alt="@item.SmallImage" style="height:100px;width:100px;" />
+                    <input type="hidden" id="smallimg_@item.ProductID" name="smallimg_@item.ProductID" value="@item.SmallImage" />
+                    <input type="hidden" id="largeimg_@item.ProductID" name="largeimg_@item.ProductID"   value="@item.LargeImage" />
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblCategory.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShortDescription)
+                </td>
+
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ProductID }, new { @class = "btn btn-success" }) |              
+                    <a href="#" class="btn btn-danger" onclick="ConfirmDelete('@item.ProductID')">Delete </a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td colspan="9">
+                @{
+                    int PrevPageNo = ViewBag.PageNo - 1;
+                    if (PrevPageNo <= 0)
+                    {
+                        PrevPageNo = 1;
+                    }
+
+                    int NextPageNo = ViewBag.PageNo + 1;
+                    if (NextPageNo > ViewBag.NoOfPages)
+                    {
+                        NextPageNo = ViewBag.NoOfPages;
+                    }
+                }
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        @Html.ActionLink("Prev", "Index", new { SortColumn = @ViewBag.SortColumn, IconClass = @ViewBag.IconClass, PageNo = @PrevPageNo }, new { htmlAttributes = new { @class = "page-link" } })
+
+                    </li>
+                    @for (int i = 0; i < ViewBag.NoOfPages; i++)
+                    {
+                        if ((i + 1) == ViewBag.PageNo)
+                        {
+                            <li class="page-item active">
+                                @Html.ActionLink("" + (i + 1), "Index", new { SortColumn = @ViewBag.SortColumn, IconClass = @ViewBag.IconClass, PageNo = (i + 1) }, new { htmlAttributes = new { @class = "page-link" } })
+
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item">
+                                @Html.ActionLink("" + (i + 1), "Index", new { SortColumn = @ViewBag.SortColumn, IconClass = @ViewBag.IconClass, PageNo = (i + 1) }, new { htmlAttributes = new { @class = "page-link" } })
+
+                            </li>
+                        }
+                    }
+                    <li class="page-item">
+                        @Html.ActionLink("Next", "Index", new { SortColumn = @ViewBag.SortColumn, IconClass = @ViewBag.IconClass, PageNo = NextPageNo }, new { htmlAttributes = new { @class = "page-link" } })
+
+
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+
+}
