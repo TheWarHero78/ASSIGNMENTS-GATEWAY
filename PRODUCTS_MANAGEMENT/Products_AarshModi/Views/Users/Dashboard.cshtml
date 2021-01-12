@@ -1,9 +1,12 @@
 ﻿
 @{
     ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
+<center>
+    <h2>Dashboard</h2>
+</center>
 
-<h2>Dashboard</h2>
 <div class="container text-center">
 
         <div class="card">
@@ -15,8 +18,10 @@
             <div class="card-body">
                 @if (Session["FullName"] != null)
                 {
-                    <p>Name: @Session["FullName"].ToString()</p>
-                    <p>Email: @Session["Email"].ToString()</p>
+                <p>
+                    <img src='@Url.Content(Session["image"].ToString())' style="height:100px;width:100px;" alt="Avatar">
+                </p>                  
+                <h2><p>Email: @Session["Email"].ToString()</p></h2>
                     
                 }
             </div>

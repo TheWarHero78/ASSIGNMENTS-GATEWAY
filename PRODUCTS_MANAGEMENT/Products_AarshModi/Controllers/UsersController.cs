@@ -39,15 +39,16 @@ namespace Products_AarshModi.Controllers
                     HttpResponseMessage webResponse = webClient.GetAsync("http://localhost:64732/api/Users/?id=" + email).Result;
                     if (webResponse.IsSuccessStatusCode)
                     {
-                        var EmpResponse = webResponse.Content.ReadAsStringAsync().Result;
-                        var products = JsonConvert.DeserializeObject<User>(EmpResponse);
+                        var Response = webResponse.Content.ReadAsStringAsync().Result;
+                        var Myuser = JsonConvert.DeserializeObject<User>(Response);
                         var f_password = GetMD5(password);
-                        if (products.Email.Equals(email) && products.Password.Equals(f_password))
+                        if (Myuser.Email.Equals(email) && Myuser.Password.Equals(f_password))
                         {
                             //add session
-                            Session["FullName"] = products.FirstName + " " + products.LastName;
-                            Session["Email"] = products.Email;
-                            Session["idUser"] = products.UserID;
+                            Session["FullName"] = Myuser.FirstName + " " + Myuser.LastName;
+                            Session["Email"] = Myuser.Email;
+                            Session["idUser"] = Myuser.UserID;
+                            Session["image"] = Myuser.PassportImage;
                             logger.Info("Login Successfull for " + Session["FullName"]);
                             FormsAuthentication.SetAuthCookie(email, false);
                             return RedirectToAction("Dashboard", "Users");
@@ -65,6 +66,7 @@ namespace Products_AarshModi.Controllers
               
                 logger.Error(ex.Message, ex);
             }
+
             ViewBag.Message = "There was a error for login..Please try again after some time!!";
             return View();
         }

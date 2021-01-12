@@ -30,8 +30,8 @@ namespace Products_AarshModi.Controllers
                 if (webResponse.IsSuccessStatusCode)
                 {
                     //Storing the response details recieved from web api   
-                    var EmpResponse = webResponse.Content.ReadAsStringAsync().Result;
-                    var products = JsonConvert.DeserializeObject<List<Product>>(EmpResponse);
+                    var Response = webResponse.Content.ReadAsStringAsync().Result;
+                    var products = JsonConvert.DeserializeObject<List<Product>>(Response);
                     ViewBag.SortColumn = SortColumn;
                     ViewBag.IconClass = IconClass;
                     int NoOfRecordsPerPage = 5;
@@ -86,8 +86,8 @@ namespace Products_AarshModi.Controllers
                     if (webResponse.IsSuccessStatusCode)
                     {
                         //Storing the response details recieved from web api   
-                        var EmpResponse = webResponse.Content.ReadAsStringAsync().Result;
-                        var products = JsonConvert.DeserializeObject<List<Product>>(EmpResponse);
+                        var Response = webResponse.Content.ReadAsStringAsync().Result;
+                        var products = JsonConvert.DeserializeObject<List<Product>>(Response);
                         ViewBag.SortColumn = "ProductName";
                         ViewBag.IconClass = "fa-sort-amount-asc";
                         ViewBag.search = search;
@@ -157,8 +157,8 @@ namespace Products_AarshModi.Controllers
                 if (webResponse.IsSuccessStatusCode)
                 {
                     //Storing the response details recieved from web api   
-                    var EmpResponse = webResponse.Content.ReadAsStringAsync().Result;
-                    var Category = JsonConvert.DeserializeObject<List<Category>>(EmpResponse);
+                    var Response = webResponse.Content.ReadAsStringAsync().Result;
+                    var Category = JsonConvert.DeserializeObject<List<Category>>(Response);
                     TempData["Category"] = new SelectList(Category, "CategoryID", "CategoryName");
                 }
                 else
@@ -265,8 +265,8 @@ namespace Products_AarshModi.Controllers
                 webResponse = webClient.GetAsync("http://localhost:64732/api/Categories").Result;
                 if (webResponse.IsSuccessStatusCode)
                 {
-                    var EmpResponse = webResponse.Content.ReadAsStringAsync().Result;
-                    var Category = JsonConvert.DeserializeObject<List<Category>>(EmpResponse);
+                    var Response = webResponse.Content.ReadAsStringAsync().Result;
+                    var Category = JsonConvert.DeserializeObject<List<Category>>(Response);
                     TempData["Category"] = new SelectList(Category, "CategoryID", "CategoryName", products.Category.ToString());
                     logger.Info("SUCCESSFULLY LOADED ALL THE CATEGORIES");
                 }

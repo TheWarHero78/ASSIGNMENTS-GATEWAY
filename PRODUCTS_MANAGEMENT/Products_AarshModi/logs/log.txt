@@ -69,3 +69,44 @@ INFO  2021-01-07 17:22:19,234 21595ms UsersController        Login              
 INFO  2021-01-07 17:22:31,206 33567ms UsersController        Login              – Login Successfull for AARSH MODI
 INFO  2021-01-07 17:25:14,341 15275ms UsersController        Login              – Login Successfull for AARSH MODI
 INFO  2021-01-07 17:37:59,861 22751ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 13:36:21,425 119355ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 13:40:20,989 31659ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 13:44:06,552 23621ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 13:56:35,415 19214ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 14:00:50,197 273996ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+INFO  2021-01-12 14:14:54,418 18113ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 14:17:07,363 38935ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 14:28:38,970 28339ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 14:31:43,194 39727ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 14:40:08,102 39915ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 15:42:15,416 2732164ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 16:07:47,291 4264039ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 16:09:03,139 22193ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 16:11:00,418 84925ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 16:47:14,127 43759ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 17:20:53,899 140319ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+INFO  2021-01-12 17:21:40,216 186637ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+DEBUG 2021-01-12 17:22:56,781  1079ms ProductsController     Edit               – NULL ID PASSED 
+DEBUG 2021-01-12 17:23:07,257 11555ms ProductsController     Edit               – NULL ID PASSED 
+INFO  2021-01-12 17:23:29,651 33949ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+DEBUG 2021-01-12 17:24:34,635  1207ms ProductsController     Edit               – NULL ID PASSED 
+INFO  2021-01-12 17:25:20,548 47120ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+INFO  2021-01-12 17:32:43,658 490230ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 18:20:51,128 179494ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 18:28:02,895 611262ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 18:35:20,475 342266ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 18:44:35,413 53317ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 18:51:55,497 493400ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+INFO  2021-01-12 18:53:35,608 593512ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+INFO  2021-01-12 19:12:29,600 1727504ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+INFO  2021-01-12 19:13:39,580 1797484ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+INFO  2021-01-12 19:13:53,850   572ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+INFO  2021-01-12 19:14:29,410 36132ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 19:14:41,089 47812ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+INFO  2021-01-12 19:19:53,682 360404ms ProductsController     Create             – DETAILS SAVED FOR PRODUCTRed Itlain Pasta
+INFO  2021-01-12 19:23:13,336 560058ms ProductsController     Create             – DETAILS SAVED FOR PRODUCTGrilled Sandwich
+INFO  2021-01-12 19:25:40,923 707645ms ProductsController     Create             – DETAILS SAVED FOR PRODUCTChocolate Ice Cream Cake
+INFO  2021-01-12 19:39:54,135 1560857ms UsersController        Login              – Login Successfull for AARSH MODI
+INFO  2021-01-12 19:41:27,516 1654238ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+INFO  2021-01-12 19:41:34,307 1661029ms ProductsController     Edit               – SUCCESSFULLY LOADED ALL THE CATEGORIES
+INFO  2021-01-12 19:44:01,763 1808485ms ProductsController     DeleteConfirmed    – SUCCESSFULLY DELETED PRODUCT WITH IDPR004

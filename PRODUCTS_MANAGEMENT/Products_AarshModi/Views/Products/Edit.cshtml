@@ -2,9 +2,10 @@
 
 @{
     ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
 
-<h2>Edit</h2>
+<center><h2>Edit Product Details</h2></center>
 
 
 @using (Html.BeginForm("Edit", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -12,7 +13,7 @@
     @Html.AntiForgeryToken()
 
 <div class="form-horizontal">
-    <h4>ProductMetaData</h4>
+    
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.ProductID)
