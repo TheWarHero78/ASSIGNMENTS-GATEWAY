@@ -218,7 +218,6 @@
     <Folder Include="ImageUploads\LargeProductsImage\" />
     <Folder Include="ImageUploads\SmallProductsImage\" />
     <Folder Include="ImageUploads\UserImage\" />
-    <Folder Include="Views\tblProducts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

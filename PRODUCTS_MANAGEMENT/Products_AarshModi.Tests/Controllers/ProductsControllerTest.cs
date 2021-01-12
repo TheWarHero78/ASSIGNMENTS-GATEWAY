@@ -21,7 +21,6 @@ namespace Products_AarshModi.Tests.Controllers
             string[] id = { };
             // Act
             ViewResult result = controller.Index(id) as ViewResult;
-
             // Assert
             Assert.IsNotNull(result);
         }
@@ -30,11 +29,9 @@ namespace Products_AarshModi.Tests.Controllers
         public void Details()
         {
             // Arrange
-            ProductsController controller = new ProductsController();
-
+            ProductsController controller = new ProductsController();        
             // Act
             ViewResult result = controller.Details("PR001") as ViewResult;
-
             // Assert
             Assert.IsNotNull(result);
         }
