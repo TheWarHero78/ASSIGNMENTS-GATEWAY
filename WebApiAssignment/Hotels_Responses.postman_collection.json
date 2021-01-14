@@ -1,0 +1,1482 @@
+{
+	"info": {
+		"_postman_id": "7f5df1e7-dbbe-4be6-b323-0a57e17fa4f3",
+		"name": "Hotels_Responses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:49807/api/Hotel/addHotel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID\": \"\",\r\n    \"Name\": \"Mirasol\",\r\n    \"Address\": \"Devka Road\",\r\n    \"City\": \"Daman\",\r\n    \"Pincode\": \"396210\",\r\n    \"Contact_Number\": \"3256895432\",\r\n    \"Contatct_Person\": \"Ravi\",\r\n    \"Website\": \"www.mirasol.com\",\r\n    \"Facebook\": \"facebook/mirasol\",\r\n    \"Twitter\": \"twitter/mirasol\",\r\n    \"IsActive\": true,\r\n    \"Created_Date\": \"2021-01-01T00:00:00\",\r\n    \"Created_By\": \"Aarsh\",\r\n    \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n    \"Updated_By\": \"Aarsh\",\r\n    \"Rooms\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Hotel/addHotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Hotel",
+						"addHotel"
+					]
+				},
+				"description": "Added Hotel 1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Hotel/addHotel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID\": \"\",\r\n    \"Name\": \"Palmera\",\r\n    \"Address\": \"Moti Daman\",\r\n    \"City\": \"Daman\",\r\n    \"Pincode\": \"396210\",\r\n    \"Contact_Number\": \"3256895432\",\r\n    \"Contatct_Person\": \"Pravin\",\r\n    \"Website\": \"www.palmera.com\",\r\n    \"Facebook\": \"facebook/palmera\",\r\n    \"Twitter\": \"twitter/palmera\",\r\n    \"IsActive\": true,\r\n    \"Created_Date\": \"2021-01-01T00:00:00\",\r\n    \"Created_By\": \"Aarsh\",\r\n    \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n    \"Updated_By\": \"Aarsh\",\r\n    \"Rooms\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Hotel/addHotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Hotel",
+						"addHotel"
+					]
+				},
+				"description": "Added Hotel 2"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Hotel/addHotel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID\": \"\",\r\n    \"Name\": \"Blue Lagoon\",\r\n    \"Address\": \"Kathria Road\",\r\n    \"City\": \"Daman\",\r\n    \"Pincode\": \"396210\",\r\n    \"Contact_Number\": \"7845215632\",\r\n    \"Contatct_Person\": \"John\",\r\n    \"Website\": \"www.bluelagoon.com\",\r\n    \"Facebook\": \"facebook/bluelagoon\",\r\n    \"Twitter\": \"twitter/bluelagoon\",\r\n    \"IsActive\": true,\r\n    \"Created_Date\": \"2021-01-01T00:00:00\",\r\n    \"Created_By\": \"Aarsh\",\r\n    \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n    \"Updated_By\": \"Aarsh\",\r\n    \"Rooms\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Hotel/addHotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Hotel",
+						"addHotel"
+					]
+				},
+				"description": "Added Hotel 3"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Hotel/addHotel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID\": \"\",\r\n    \"Name\": \"Cidade Daman\",\r\n    \"Address\": \"Marwad Road\",\r\n    \"City\": \"Daman\",\r\n    \"Pincode\": \"396210\",\r\n    \"Contact_Number\": \"4512569821\",\r\n    \"Contatct_Person\": \"Ali\",\r\n    \"Website\": \"www.cidade.com\",\r\n    \"Facebook\": \"facebook/cidade\",\r\n    \"Twitter\": \"twitter/cidade\",\r\n    \"IsActive\": true,\r\n    \"Created_Date\": \"2021-01-01T00:00:00\",\r\n    \"Created_By\": \"Aarsh\",\r\n    \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n    \"Updated_By\": \"Aarsh\",\r\n    \"Rooms\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Hotel/addHotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Hotel",
+						"addHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Hotel/addHotel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID\": \"\",\r\n    \"Name\": \"Sea Rock\",\r\n    \"Address\": \"Jetty Road\",\r\n    \"City\": \"Daman\",\r\n    \"Pincode\": \"396210\",\r\n    \"Contact_Number\": \"8965325632\",\r\n    \"Contatct_Person\": \"Manish\",\r\n    \"Website\": \"www.searock.com\",\r\n    \"Facebook\": \"facebook/searock\",\r\n    \"Twitter\": \"twitter/searock\",\r\n    \"IsActive\": true,\r\n    \"Created_Date\": \"2021-01-01T00:00:00\",\r\n    \"Created_By\": \"Aarsh\",\r\n    \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n    \"Updated_By\": \"Aarsh\",\r\n    \"Rooms\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Hotel/addHotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Hotel",
+						"addHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Hotel/addHotel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID\": \"\",\r\n    \"Name\": \"Emrald\",\r\n    \"Address\": \"Sea Face Road\",\r\n    \"City\": \"Daman\",\r\n    \"Pincode\": \"396210\",\r\n    \"Contact_Number\": \"8965325632\",\r\n    \"Contatct_Person\": \"Vivek\",\r\n    \"Website\": \"www.Emrald.com\",\r\n    \"Facebook\": \"facebook/Emrald\",\r\n    \"Twitter\": \"twitter/Emrald\",\r\n    \"IsActive\": true,\r\n    \"Created_Date\": \"2021-01-01T00:00:00\",\r\n    \"Created_By\": \"Aarsh\",\r\n    \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n    \"Updated_By\": \"Aarsh\",\r\n    \"Rooms\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Hotel/addHotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Hotel",
+						"addHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Hotel/find/7",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:49807/api/Hotel/showAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Hotel",
+						"showAll"
+					]
+				},
+				"description": "GETTING ALL THE DETAILS"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Hotel/find/7",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:49807/api/Hotel/find/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Hotel",
+						"find",
+						"7"
+					]
+				},
+				"description": "finding hotel by optional parameters"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Regular\",\r\n        \"Category\": null,\r\n        \"Price\": 1000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 2,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Regular\",\r\n        \"Category\": null,\r\n        \"Price\": 1000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 3,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Regular\",\r\n        \"Category\": null,\r\n        \"Price\": 1000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 4,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Regular\",\r\n        \"Category\": null,\r\n        \"Price\": 1000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 5,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Regular\",\r\n        \"Category\": null,\r\n        \"Price\": 1000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 6,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Regular\",\r\n        \"Category\": null,\r\n        \"Price\": 1000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 7,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Super Delux\",\r\n        \"Category\": \"size 36-50 m2\",\r\n        \"Price\": 2000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 2,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Super Delux\",\r\n        \"Category\": \"size 36-50 m2\",\r\n        \"Price\": 2000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 3,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Super Delux\",\r\n        \"Category\": \"size 36-50 m2\",\r\n        \"Price\": 2000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 4,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Super Delux\",\r\n        \"Category\": \"size 36-50 m2\",\r\n        \"Price\": 2000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 5,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Super Delux\",\r\n        \"Category\": \"size 36-50 m2\",\r\n        \"Price\": 2000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 6,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Super Delux\",\r\n        \"Category\": \"size 36-50 m2\",\r\n        \"Price\": 2000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 7,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Presidential Suite\",\r\n        \"Category\": \"size 51-100 m2\",\r\n        \"Price\": 5000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 1,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Presidential Suite\",\r\n        \"Category\": \"size 51-100 m2\",\r\n        \"Price\": 5000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 2,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Presidential Suite\",\r\n        \"Category\": \"size 51-100 m2\",\r\n        \"Price\": 5000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 3,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Presidential Suite\",\r\n        \"Category\": \"size 51-100 m2\",\r\n        \"Price\": 5000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 4,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Presidential Suite\",\r\n        \"Category\": \"size 51-100 m2\",\r\n        \"Price\": 5000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 5,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Presidential Suite\",\r\n        \"Category\": \"size 51-100 m2\",\r\n        \"Price\": 5000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 6,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ID\": \"\",\r\n        \"Name\": \"Presidential Suite\",\r\n        \"Category\": \"size 51-100 m2\",\r\n        \"Price\": 5000.0000,\r\n        \"IsActive\": true,\r\n        \"Created_Date\": \"2021-01-01T00:00:00\",\r\n        \"Created_By\": \"Aarsh\",\r\n        \"Updated_Date\": \"2021-01-01T00:00:00\",\r\n        \"Updated_By\": \"Aarsh\",\r\n        \"Hotel_ID\": 7,\r\n        \"Bookings\": [],\r\n        \"Hotel\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/book",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"ID\": \"\",\r\n        \"Booking_Date\": \"2021-01-01T00:00:00\",\r\n        \"Room_ID\": 2,\r\n        \"Status\": \"Optional\",\r\n        \"Room\": null\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/book",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"ID\": \"\",\r\n        \"Booking_Date\": \"2021-01-01T00:00:00\",\r\n        \"Room_ID\": 3,\r\n        \"Status\": \"Optional\",\r\n        \"Room\": null\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Room/book",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"ID\": \"\",\r\n        \"Booking_Date\": \"2021-01-01T00:00:00\",\r\n        \"Room_ID\": 4,\r\n        \"Status\": \"Optional\",\r\n        \"Room\": null\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Room/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Room",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Booking/updateBooking",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"ID\": 14,\r\n        \"Booking_Date\": \"2021-01-14T00:00:00\",\r\n        \"Room_ID\": 4,\r\n        \"Status\": \"Optional\",\r\n        \"Room\": null\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Booking/updateBooking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Booking",
+						"updateBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Booking/updateBooking",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"ID\": 14,\r\n        \"Booking_Date\": \"2021-01-14T00:00:00\",\r\n        \"Room_ID\": 4,\r\n        \"Status\": \"Definitive\",\r\n        \"Room\": null\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Booking/updateStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Booking",
+						"updateStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:49807/api/Booking/updateBooking",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "abcd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"ID\": 14,\r\n        \"Booking_Date\": \"2021-01-14T00:00:00\",\r\n        \"Room_ID\": 4,\r\n        \"Status\": \"Deleted\",\r\n        \"Room\": null\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49807/api/Booking/deleteBooking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49807",
+					"path": [
+						"api",
+						"Booking",
+						"deleteBooking"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
