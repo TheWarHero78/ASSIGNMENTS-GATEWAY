@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+<center>
+    <h2>Dashboard</h2>
+</center>
+
+<div class="container text-center">
+
+        <div class="card">
+            <div class="card-header">
+                <h2>
+                    Welcome  <b>@Session["FullName"].ToString() !! </b>
+                </h2>
+            </div>
+            <div class="card-body">
+                @if (Session["FullName"] != null)
+                {
+                <p>
+                    <img src='@Url.Content(Session["image"].ToString())' style="height:100px;width:100px;" alt="Avatar">
+                </p>                  
+                <h2><p>Email: @Session["Email"].ToString()</p></h2>
+                    
+                }
+            </div>
+        </div>
+</div>
+

@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        Dealer
+        @Html.ActionLink("Dealer Index", "Index", "Dealer")
+
+    </div>
+    <div class="col-md-4">
+        Services
+        @Html.ActionLink("Services Index", "Index", "Service")
+
+    </div>
+    <div class="col-md-4">
+        Mechanics
+        @Html.ActionLink("Mechanic Index", "Index", "Mechanic")
+
+    </div>
+    <div class="col-md-4">
+        Vehicles
+        @Html.ActionLink("Vehicles Index", "Index", "Vehicle")
+
+    </div>
+    <div class="col-md-4">
+        Users
+        @Html.ActionLink("Users Index", "Index", "User")
+
+    </div>
+    <div class="col-md-4">
+        Bookings
+        @Html.ActionLink("Bookings Index", "Index", "Booking")
+
+    </div>
+
+</div>

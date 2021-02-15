@@ -1,0 +1,69 @@
+﻿@model IEnumerable<SBS.BusinessEntities.VehicleViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Brand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LicensePlate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChasisNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastServiceDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Brand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Make)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LicensePlate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChasisNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastServiceDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ExternalID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ExternalID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ExternalID })
+        </td>
+    </tr>
+}
+
+</table>
