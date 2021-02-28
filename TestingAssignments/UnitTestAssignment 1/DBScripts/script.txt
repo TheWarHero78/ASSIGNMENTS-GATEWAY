@@ -1,0 +1,23 @@
+USE [DBCLPM]
+GO
+
+/****** Object:  Table [dbo].[Passenger]    Script Date: 27-02-2021 19:06:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Passenger](
+	[PNumber] [uniqueidentifier] NOT NULL,
+	[FirstName] [nvarchar](15) NOT NULL,
+	[LastName] [nvarchar](15) NOT NULL,
+	[PhoneNumber] [nvarchar](15) NOT NULL,
+ CONSTRAINT [PK_Passenger] PRIMARY KEY CLUSTERED 
+(
+	[PNumber] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
