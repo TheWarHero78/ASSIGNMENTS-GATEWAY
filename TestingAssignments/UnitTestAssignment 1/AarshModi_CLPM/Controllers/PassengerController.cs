@@ -25,56 +25,44 @@ namespace AarshModi_CLPM.Controllers
         {
 
             return _passengerManager.registerPassenger(model);
-            
+
         }
 
         [HttpPut]
         [Route("api/Passengers/updatePassengerDetails")]
         public Passenger updatePassengerDetails([FromBody] Passenger model)
         {
-          
+
             var result = _passengerManager.updatePassengerDetails(model);
             return result;
-            
+
         }
         [HttpDelete]
         [Route("api/Passengers/deletePassengerDetails")]
         public bool deletePassengerDetails(String id)
         {
-           
-                bool result = _passengerManager.deletePassengerDetails(id);
-                return result;
-              
+
+            bool result = _passengerManager.deletePassengerDetails(id);
+            return result;
+
 
         }
         [HttpGet]
         [Route("api/Passengers/GetPassenger")]
-        public HttpResponseMessage GetPassenger(String id)
+        public Passenger GetPassenger(String id)
         {
-            if (id != null)
+
+            var passenger = _passengerManager.getPassengerByexID(id);
+            if (passenger.FirstName != null)
             {
-                try
-                {
+                return passenger;
 
-                    var passenger = _passengerManager.getPassengerByexID(id);
-                    if (passenger.FirstName != null)
-                    {
-                        return Request.CreateResponse(HttpStatusCode.OK, passenger);
-
-                    }
-                    else
-                    {
-                        return Request.CreateResponse(HttpStatusCode.InternalServerError);
-
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    return Request.CreateResponse(HttpStatusCode.InternalServerError);
-                }
             }
-            return Request.CreateResponse(HttpStatusCode.BadRequest);
+            else
+            {
+                return null;
+
+            }
         }
         [HttpGet]
         [Route("api/Passengers/getAllPassenger")]

@@ -7,7 +7,7 @@ namespace ExtensionMethods
 {
     public static class UtilityHelper
     {
-        public static String createLowerCase(String input)
+        public static String createLowerCase(this String input)
         {
             StringBuilder str = new StringBuilder(input);
             int ln = str.Length;
@@ -15,25 +15,24 @@ namespace ExtensionMethods
             for (int i = 0; i < ln; i++)
             {
                 if (str[i] >= 'A' && str[i] <= 'Z')
-
-
                     str[i] = (char)(str[i] + 32);
+                else if (str[i] >= 'a' && str[i] <= 'z')
+                    str[i] = (char)(str[i] - 32);
             }
             return str.ToString();
         }
-        public static String createUpperCase(String input)
+        public static String createUpperCase(this String input)
         {
             StringBuilder str = new StringBuilder(input);
             int ln = str.Length;
 
-
-
             for (int i = 0; i < ln; i++)
             {
                 if (str[i] >= 'a' && str[i] <= 'z')
-
-
                     str[i] = (char)(str[i] - 32);
+                else if (str[i] >= 'A' && str[i] <= 'Z')
+                    str[i] = (char)(str[i] + 32);
+
             }
             return str.ToString();
         }
@@ -54,7 +53,7 @@ namespace ExtensionMethods
             }
             return true;
         }
-        public static bool CheckUpperCase(String str)
+        public static bool CheckUpperCase(this String str)
         {
             int ln = str.Length;
 
@@ -68,7 +67,7 @@ namespace ExtensionMethods
             return true;
         }
 
-        public static string FirstLetterToUpper(string str)
+        public static string FirstLetterToUpper( this string str)
         {
             if (str == null)
                 return null;
@@ -80,20 +79,20 @@ namespace ExtensionMethods
         }
 
 
-        public static bool ValidNumeric(String input)
+        public static bool ValidNumeric(this String input)
         {
             int n;
             bool isNumeric = int.TryParse(input, out n);
             return isNumeric;
         }
 
-        public static String removeLastChar(String s)
+        public static String removeLastChar( this String s)
         {
             return (s == null || s.Length == 0)
               ? null
               : (s.Substring(0, s.Length - 1));
         }
-        public static int GetWordCount(String input)
+        public static int GetWordCount(this String input)
         {
 
             int ln = input.Length;
@@ -101,7 +100,7 @@ namespace ExtensionMethods
 
             return words.Length;
         }
-        public static int StringToInt(String input)
+        public static int StringToInt(this String input)
         {
             int x = 0;
 

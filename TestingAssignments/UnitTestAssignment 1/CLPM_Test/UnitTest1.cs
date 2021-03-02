@@ -48,7 +48,7 @@ namespace CLPM_Test
         {
             //Arrange
             var passenger = new Passenger();
-            passenger.PNumber = new System.Guid("1f02f425-800a-4f8d-aa8b-c1450981ce1e");
+            passenger.PNumber = new System.Guid("3CDBC747-DB0A-4EF1-9353-6A1110DC05B9");
 
             var resultType = mockDataRepo.Setup(x => x.getPassengerByexID(passenger.PNumber.ToString())).Returns(passenger);
             //Act
@@ -61,15 +61,12 @@ namespace CLPM_Test
         [Fact]
         public void Test_AddPassenger()
         {
-
+            //Arrange
             var newpassenger = new Passenger() { PNumber = new System.Guid(), FirstName = "Pinkal", LastName = "SHARMA", PhoneNumber = "123456789" };
-
             var response = mockDataRepo.Setup(x => x.registerPassenger(newpassenger)).Returns(AddPassenger());
-
-
-            //Act
-                      
+            //Act          
             var result = _passengerController.registerPassenger(newpassenger);
+            //Assert
             Assert.NotNull(result);
 
 
