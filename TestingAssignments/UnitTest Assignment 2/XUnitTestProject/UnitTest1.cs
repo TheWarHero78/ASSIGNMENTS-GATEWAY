@@ -2,126 +2,136 @@ using ExtensionMethods;
 using System;
 using Xunit;
 
+
 namespace XUnitTestProject
 {
+    /// <summary>
+    /// Unit Test Class 
+    /// </summary>
     public class UnitTest1
     {
         [Fact]
         public void Test_UpperToLower()
         {
-            //Arrange
+            // Arrange
             var input = "AARSH";           
             var expectedValue = "aarsh";
+            var input1 = "WORLD IS A good PLACE";
+            var expectedValue1 = "world is a good place ";
 
             // Act
             var result = UtilityHelper.createLowerCase(input);
+            var result1 = UtilityHelper.createLowerCase(input1);
 
             //Assert
             Assert.Equal(expectedValue, result);
+            Assert.Equal(expectedValue1, result1);
         }
 
         [Fact]
         public void Test_LowerToUpper()
         {
-            //Arrange
+            // Arrange
             var input = "aarsh";
             var expectedValue = "AARSH";
       
              // Act
              var result = UtilityHelper.createUpperCase(input);
 
-            //Assert
+            // Assert
             Assert.Equal(expectedValue, result);
         }
 
         [Fact]
         public void Test_TitleCase()
         {
-            //Arrange
+            // Arrange
             var input = "war and peace";
             var expectedValue = "War And Peace";
 
             // Act
             var result = UtilityHelper.ToTitleCase(input);
 
-            //Assert
+            // Assert
             Assert.Equal(expectedValue, result);
         }
         [Fact]
         public void Test_ValidateLowerCase()
         {
-            //Arrange
+            // Arrange
             var input = "war and peace";
             var expectedValue = true;
             // Act
             var result = UtilityHelper.CheckLowerCase(input);
-            //Assert
+            // Assert
             Assert.Equal(expectedValue, result);
         }
         [Fact]
         public void Test_ValidateUpperCase()
         {
-            //Arrange
+            // Arrange
             var input = "AARSH";
             var expectedValue = true;
             // Act
             var result = UtilityHelper.CheckUpperCase(input);
-            //Assert
+            // Assert
             Assert.Equal(expectedValue, result);
         }
         [Fact]
         public void Test_FisrtToUpper()
         {
-            //Arrange
+            // Arrange
             var input = "aarsh";
             var expectedValue = "Aarsh";
+
+
             // Act
             var result = UtilityHelper.FirstLetterToUpper(input);
-            //Assert
+            // Assert
             Assert.Equal(expectedValue, result);
         }
         [Fact]
         public void Test_ValidateNumeric()
         {
-            //Arrange
+            // Arrange
             var input = "123";
             var expectedValue = true;
             // Act
             var result = UtilityHelper.ValidNumeric(input);
-            //Assert
+            // Assert
             Assert.Equal(expectedValue, result);
         }
         [Fact]
         public void Test_RemoveLast()
         {
-            //Arrange
+            // Arrange
             var input = "aarsh";
             var expectedValue = "aars";
             // Act
             var result = UtilityHelper.removeLastChar(input);
-            //Assert
+            // Assert
             Assert.Equal(expectedValue, result);
         }
         [Fact]
         public void Test_GetWordCount()
         {
-            //Arrange
+            // Arrange
             var input = "aarsh modi";
             var expectedValue = 2;
             // Act
             var result = UtilityHelper.GetWordCount(input);
-            //Assert
+            // Assert
             Assert.Equal(expectedValue, result);
         }
         [Fact]
         public void Test_ConvertStringToInt()
         {
-            //Arrange
+            // Arrange
             var input = "123";
             var expectedValue = 123;
             // Act
             var result = UtilityHelper.StringToInt(input);
-            //Assert
+            // Assert
             Assert.Equal(expectedValue, result);
         }
     }
