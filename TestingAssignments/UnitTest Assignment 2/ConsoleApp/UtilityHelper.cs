@@ -166,10 +166,11 @@ namespace ExtensionMethods
         public static int GetWordCount(this String input)
         {
 
-            int ln = input.Length;
-            String[] words = input.Split(' ');
-
-            return words.Length;
+            var wordCount = 0;
+            for (var i = 0; i < input.Length; i++)
+                if (input[i] == ' ' || i == input.Length - 1)
+                    wordCount++;
+            return wordCount;
         }
 
         /// <summary>
