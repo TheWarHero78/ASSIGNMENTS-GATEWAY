@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using PMS.Common.Models;
+using PMS.DAL.Models;
 using PMS.DAL.Repository.Interface;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,10 @@ namespace PMS.DAL.Repository.Classes
 {
     public class ProductRepository : IProductRepository
     {
-        private readonly Models.DBProductsEntities _dbContext;
+        private readonly Models.DBProductsEntities1 _dbContext;
         public ProductRepository()
         {
-            _dbContext = new Models.DBProductsEntities();
+            _dbContext = new DBProductsEntities1();
         }
 
         public bool checkProduct(string id)
@@ -219,4 +220,4 @@ namespace PMS.DAL.Repository.Classes
         }
     }
     }
-}
+

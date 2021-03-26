@@ -20,8 +20,8 @@ namespace XUnitTestProject
             var expectedValue1 = "world is a GOOD place";
 
             // Act
-            var result = UtilityHelper.createLowerCase(input);
-            var result1 = UtilityHelper.createLowerCase(input1);
+            var result = input.c;
+            var result1 = input1.createLowerCase();
 
             //Assert
             Assert.Equal(expectedValue, result);
@@ -51,8 +51,6 @@ namespace XUnitTestProject
             var input1 = "21 and #eace";
             var expectedValue1 = "21 And #Eace";
 
-
-
             // Act
             var result = UtilityHelper.ToTitleCase(input);
             var result1 = UtilityHelper.ToTitleCase(input1);
@@ -61,6 +59,7 @@ namespace XUnitTestProject
             Assert.Equal(expectedValue, result);
             Assert.Equal(expectedValue1, result1);
         }
+
         [Fact]
         public void Test_ValidateLowerCase()
         {
@@ -79,6 +78,7 @@ namespace XUnitTestProject
             Assert.Equal(expectedValue, result);
             Assert.Equal(expectedValue1, result1);
         }
+
         [Fact]
         public void Test_ValidateUpperCase()
         {
@@ -89,7 +89,6 @@ namespace XUnitTestProject
             var input1 = "#@1D343";
             var expectedValue1 = true;
 
-
             // Act
             var result = UtilityHelper.CheckUpperCase(input);
             var result1 = UtilityHelper.CheckUpperCase(input1);
@@ -98,6 +97,7 @@ namespace XUnitTestProject
             Assert.Equal(expectedValue, result);
             Assert.Equal(expectedValue1, result1);
         }
+
         [Fact]
         public void Test_FisrtToUpper()
         {

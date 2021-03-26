@@ -1,12 +1,7 @@
 ﻿using PMS.DAL.Repository.Classes;
 using PMS.DAL.Repository.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Unity.Extension;
 using Unity;
+using Unity.Extension;
 
 namespace PMS.BAL.Helper
 {
@@ -17,7 +12,8 @@ namespace PMS.BAL.Helper
             {
                 Container.RegisterType<IUserRepository, UserRepository>();
                 Container.RegisterType<IProductRepository, ProductRepository>();
-                Container.RegisterType<IUserRepository, UserRepository>();
+                Container.RegisterType<ICategoryReposiory, CategoryRepository>();
+
             }
         }
     }

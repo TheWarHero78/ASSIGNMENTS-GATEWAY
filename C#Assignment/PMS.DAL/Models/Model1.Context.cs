@@ -13,9 +13,9 @@ namespace PMS.DAL.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBProductsEntities : DbContext
+    public partial class DBProductsEntities1 : DbContext
     {
-        public DBProductsEntities()
+        public DBProductsEntities1()
             : base("name=DBProductsEntities1")
         {
         }

@@ -11,10 +11,10 @@ namespace PMS.DAL.Repository.Classes
 {
     public class CategoryRepository : ICategoryReposiory
     {
-        private readonly Models.DBProductsEntities _dbContext;
+        private readonly Models.DBProductsEntities1 _dbContext;
         public CategoryRepository()
         {
-            _dbContext = new Models.DBProductsEntities();
+            _dbContext = new Models.DBProductsEntities1();
         }
         public bool checkCategory(string id)
         {

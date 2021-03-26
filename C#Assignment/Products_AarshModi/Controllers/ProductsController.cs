@@ -306,7 +306,7 @@ namespace Products_AarshModi.Controllers
                 tblProduct.LongDescription = MyProduct.LongDescription;
                 tblProduct.LargeImage = MyProduct.LargeImagePath;
                 tblProduct.SmallImage = MyProduct.SmallImagePath;
-                HttpResponseMessage webResponse = webClient.PutAsJsonAsync("http://localhost:64732/api/Products/" + , tblProduct).Result;
+                HttpResponseMessage webResponse = webClient.PutAsJsonAsync("http://localhost:64732/api/Products/" ,  tblProduct).Result;
                 if (webResponse.IsSuccessStatusCode)
                 {
                     removeImages(fc["largeimg"].ToString(), fc["smallimg"].ToString());

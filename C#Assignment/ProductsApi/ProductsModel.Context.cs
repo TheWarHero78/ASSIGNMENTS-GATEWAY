@@ -20,7 +20,6 @@ namespace ProductsApi
         public DBProductsEntities()
             : base("name=DBProductsEntities")
         {
-          
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

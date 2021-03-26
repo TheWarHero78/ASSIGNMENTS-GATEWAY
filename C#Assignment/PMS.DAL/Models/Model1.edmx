@@ -4,7 +4,19 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DBProductsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DBProductsModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Logs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Thread" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Level" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Logger" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Message" Type="varchar" MaxLength="4000" Nullable="false" />
+          <Property Name="Exception" Type="varchar" MaxLength="2000" />
+        </EntityType>
         <EntityType Name="tblCategories">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -51,7 +63,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DBProductsModelStoreContainer">
+        <EntityContainer Name="DBProductsModel1StoreContainer">
+          <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblCategories" EntityType="Self.tblCategories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblProducts" EntityType="Self.tblProducts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblUsers" EntityType="Self.tblUsers" Schema="dbo" store:Type="Tables" />
@@ -60,10 +73,11 @@
             <End Role="tblProducts" EntitySet="tblProducts" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DBProductsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DBProductsModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Log">
           <Key>
             <PropertyRef Name="Id" />
@@ -124,7 +138,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DBProductsEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DBProductsEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Logs" EntityType="Self.Log" />
           <EntitySet Name="tblCategories" EntityType="Self.tblCategory" />
           <EntitySet Name="tblProducts" EntityType="Self.tblProduct" />
@@ -133,40 +147,28 @@
             <End Role="tblCategories" EntitySet="tblCategories" />
             <End Role="tblProducts" EntitySet="tblProducts" />
           </AssociationSet>
-          <FunctionImport Name="DeleteProductDetails">
-            <Parameter Name="id" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="InsertProductDetails">
-            <Parameter Name="id" Mode="In" Type="String" />
-            <Parameter Name="product_name" Mode="In" Type="String" />
-            <Parameter Name="categ" Mode="In" Type="String" />
-            <Parameter Name="price" Mode="In" Type="Decimal" />
-            <Parameter Name="qty" Mode="In" Type="Int32" />
-            <Parameter Name="shortdesc" Mode="In" Type="String" />
-            <Parameter Name="longdesc" Mode="In" Type="String" />
-            <Parameter Name="smallimg" Mode="In" Type="String" />
-            <Parameter Name="lrgimg" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="UpdateProductDetails">
-            <Parameter Name="id" Mode="In" Type="String" />
-            <Parameter Name="product_name" Mode="In" Type="String" />
-            <Parameter Name="categ" Mode="In" Type="String" />
-            <Parameter Name="price" Mode="In" Type="Decimal" />
-            <Parameter Name="qty" Mode="In" Type="Int32" />
-            <Parameter Name="shortdesc" Mode="In" Type="String" />
-            <Parameter Name="longdesc" Mode="In" Type="String" />
-            <Parameter Name="smallimg" Mode="In" Type="String" />
-            <Parameter Name="lrgimg" Mode="In" Type="String" />
-          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DBProductsModelStoreContainer" CdmEntityContainer="DBProductsEntities">
+        <EntityContainerMapping StorageEntityContainer="DBProductsModel1StoreContainer" CdmEntityContainer="DBProductsEntities1">
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="DBProductsModel1.Log">
+              <MappingFragment StoreEntitySet="Logs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Thread" ColumnName="Thread" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Logger" ColumnName="Logger" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tblCategories">
-            <EntityTypeMapping TypeName="DBProductsModel.tblCategory">
+            <EntityTypeMapping TypeName="DBProductsModel1.tblCategory">
               <MappingFragment StoreEntitySet="tblCategories">
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
@@ -174,7 +176,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblProducts">
-            <EntityTypeMapping TypeName="DBProductsModel.tblProduct">
+            <EntityTypeMapping TypeName="DBProductsModel1.tblProduct">
               <MappingFragment StoreEntitySet="tblProducts">
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
@@ -189,7 +191,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblUsers">
-            <EntityTypeMapping TypeName="DBProductsModel.tblUser">
+            <EntityTypeMapping TypeName="DBProductsModel1.tblUser">
               <MappingFragment StoreEntitySet="tblUsers">
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -202,7 +204,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          </EntityContainerMapping>
+        </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

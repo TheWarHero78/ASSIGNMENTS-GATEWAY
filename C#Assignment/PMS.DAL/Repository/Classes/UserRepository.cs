@@ -11,10 +11,10 @@ namespace PMS.DAL.Repository.Classes
 {
     public class UserRepository : IUserRepository
     {
-        private readonly Models.DBProductsEntities _dbContext;
+        private readonly Models.DBProductsEntities1 _dbContext;
         public UserRepository()
         {
-            _dbContext = new Models.DBProductsEntities();
+            _dbContext = new Models.DBProductsEntities1();
         }
         public bool checkUser(string id)
         {
@@ -138,7 +138,7 @@ namespace PMS.DAL.Repository.Classes
         }
     
 
-        public bool updateUser(string id, User model)
+        public bool updateUser( User model)
         {
             try
             {
@@ -177,6 +177,8 @@ namespace PMS.DAL.Repository.Classes
             return false;
 
         }
+
+        
     }
     
 }
