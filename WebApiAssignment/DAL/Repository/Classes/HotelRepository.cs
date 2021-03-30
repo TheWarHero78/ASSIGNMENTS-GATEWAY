@@ -14,10 +14,10 @@ namespace DAL.Repository.Classes
     public class HotelRepository : IHotelRepository
     {
 
-        private readonly EntityDB.DBHotelsEntities1 _dbContext;
+        private readonly EntityDB.DBHotelsEntities _dbContext;
         public HotelRepository()
         {
-            _dbContext = new EntityDB.DBHotelsEntities1();
+            _dbContext = new EntityDB.DBHotelsEntities();
         }
         public string createHotel(Hotel entity)
         {

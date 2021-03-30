@@ -125,6 +125,7 @@
       <DependentUpon>HotelModel.edmx</DependentUpon>
       <LastGenOutput>HotelModel.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="EntityDB\HotelModel.edmx.sql" />
     <Content Include="EntityDB\HotelModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HotelModel.edmx</DependentUpon>

@@ -1,0 +1,195 @@
+<div class="p-5">
+  <h3>Add/Edit Company</h3>
+  <form class="mt-5" [formGroup]="companyForm" (ngSubmit)="save()">
+    <div class="form-group">
+      <label for="CID" class="label-control">CID</label>
+      <input
+        type="text"
+        formControlName="CID"
+        id="CID"
+        class="form-control"
+        required
+      />
+
+      <div
+        *ngIf="f.CID.invalid && (f.CID.dirty || f.CID.touched)"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f.CID.errors.required">CID is required.</div>
+        <div *ngIf="f.CID.errors.minlength">
+          CID must be at shorter then 3 characters
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Email" class="label-control">Email </label>
+      <input
+        type="text"
+        formControlName="Email"
+        id="Email"
+        class="form-control"
+        required
+      />
+      <span>
+        <div
+          *ngIf="f.Email.touched && f.Email.invalid"
+          class="alert alert-danger"
+        >
+          <div
+            *ngIf="f.Email.touched && f.Email.invalid"
+            class="alert alert-danger"
+          >
+            <div *ngIf="f.Email.errors.required">Email is required.</div>
+
+            <div *ngIf="f.Email.errors.email">
+              Please, enter valid email address.
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="Name" class="label-control">Name </label>
+      <input
+        type="text"
+        formControlName="Name"
+        id="Name"
+        class="form-control"
+        required
+      />
+      <div
+        *ngIf="f.Name.invalid && (f.Name.dirty || f.Name.touched)"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f.Name.errors.required">Name is required.</div>
+        <div *ngIf="f.Name.errors.minlength">
+          Name must be at greater then 3 characters
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="TotalEmp" class="label-control">TotalEmp </label>
+      <input
+        type="number"
+        formControlName="TotalEmp"
+        id="TotalEmp"
+        class="form-control"
+        required
+        min="1"
+        max="100"
+      />
+      <div
+        *ngIf="f.TotalEmp.invalid && (f.TotalEmp.dirty || f.TotalEmp.touched)"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f.TotalEmp.errors.required">TotalEmp is required.</div>
+        <div *ngIf="f.TotalEmp.errors.max">TotalEmp must be greter than 1.</div>
+        <div *ngIf="f.TotalEmp.errors.max">TotalEmp must be less than 100.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Address" class="label-control">Address </label>
+      <input
+        type="text"
+        formControlName="Address"
+        id="Address"
+        class="form-control"
+        required
+      />
+      <div
+        *ngIf="f.Address.touched && f.Address.invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f.Address.errors.required">Address is required.</div>
+
+        <div *ngIf="f.Address.errors.email">Please, enter valid Address.</div>
+      </div>
+    </div>
+
+    <label for="isCompanyActive " class="label-control">isCompanyActive</label>
+    <select
+      formControlName="isCompanyActive"
+      class="form-control"
+      id="isCompanyActive "
+      required
+    >
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+    <div *ngIf="f.isCompanyActive.dirty && f.isCompanyActive.errors">
+      Please select a valid Option
+    </div>
+
+    <div
+      formArrayName="branches"
+      *ngFor="let item of contactFormGroup.controls; let i = index"
+    >
+      <div [formGroupName]="i">
+        <p>Branch {{ i + 1 }}</p>
+        <input
+          formControlName="branchId"
+          class="form-control"
+          placeholder="Branch ID"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            getContactsFormGroup(i).controls['branchId'].touched &&
+            getContactsFormGroup(i).controls['branchId'].hasError('required')
+          "
+        >
+          Branch ID is required!
+        </span>
+        <input
+          formControlName="branchName"
+          class="form-control"
+          placeholder="Branch Name"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            getContactsFormGroup(i).controls['branchName'].touched &&
+            getContactsFormGroup(i).controls['branchName'].hasError('required')
+          "
+        >
+          Branch Name is required!
+        </span>
+
+        <input
+          formControlName="address"
+          class="form-control"
+          placeholder="Branch Address"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            getContactsFormGroup(i).controls['address'].touched &&
+            getContactsFormGroup(i).controls['address'].hasError('required')
+          "
+        >
+          Branch Address is required!
+        </span>
+      </div>
+      <button type="button" (click)="removeBranch(i)">Remove Branch</button>
+    </div>
+    <button type="button" (click)="addBranch()">Add Branch</button>
+
+    <button type="button" (click)="getadd()">get Address</button>
+    <div class="mt-2 d-flex align-items-center justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-success bt-large px-5"
+        [disabled]="companyForm.invalid"
+      >
+        Save
+      </button>
+      <button class="btn btn-danger bt-large px-5 ml-5" routerLink="../list">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

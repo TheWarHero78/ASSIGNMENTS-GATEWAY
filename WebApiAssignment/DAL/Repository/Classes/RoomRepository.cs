@@ -18,10 +18,10 @@ namespace DAL.Repository.Classes
             Cancelled,
             Deleted
         }
-        private readonly EntityDB.DBHotelsEntities1 _dbContext;
+        private readonly EntityDB.DBHotelsEntities _dbContext;
         public RoomRepository()
         {
-            _dbContext = new EntityDB.DBHotelsEntities1();
+            _dbContext = new EntityDB.DBHotelsEntities();
         }
 
         public string bookRoom(Booking model)

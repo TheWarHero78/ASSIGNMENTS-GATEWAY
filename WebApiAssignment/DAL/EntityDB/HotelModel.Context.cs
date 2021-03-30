@@ -13,10 +13,10 @@ namespace DAL.EntityDB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBHotelsEntities1 : DbContext
+    public partial class DBHotelsEntities : DbContext
     {
-        public DBHotelsEntities1()
-            : base("name=DBHotelsEntities1")
+        public DBHotelsEntities()
+            : base("name=DBHotelsEntities")
         {
         }
     
@@ -24,10 +24,7 @@ namespace DAL.EntityDB
         {
             throw new UnintentionalCodeFirstException();
         }
-        public void FixEfProviderServicesProblem()
-        {
-            var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
-        }
+    
         public virtual DbSet<Booking> Bookings { get; set; }
         public virtual DbSet<Hotel> Hotels { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBHotelsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBHotelsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Bookings">
           <Key>
             <PropertyRef Name="ID" />
@@ -29,9 +29,9 @@
           <Property Name="Facebook" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Twitter" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
-          <Property Name="Created_Date" Type="date" Nullable="false" />
+          <Property Name="Created_Date" Type="datetime" Nullable="false" />
           <Property Name="Created_By" Type="nvarchar" MaxLength="50" />
-          <Property Name="Updated_Date" Type="date" Nullable="false" />
+          <Property Name="Updated_Date" Type="datetime" Nullable="false" />
           <Property Name="Updated_By" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Rooms">
@@ -41,11 +41,11 @@
           <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Category" Type="nvarchar" MaxLength="50" />
-          <Property Name="Price" Type="money" />
+          <Property Name="Price" Type="decimal" Precision="19" Scale="4" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
-          <Property Name="Created_Date" Type="date" />
+          <Property Name="Created_Date" Type="datetime" />
           <Property Name="Created_By" Type="nvarchar" MaxLength="50" />
-          <Property Name="Updated_Date" Type="date" />
+          <Property Name="Updated_Date" Type="datetime" />
           <Property Name="Updated_By" Type="nvarchar" MaxLength="50" />
           <Property Name="Hotel_ID" Type="bigint" />
         </EntityType>
@@ -86,8 +86,7 @@
             <End Role="Rooms" EntitySet="Rooms" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBHotelsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -116,9 +115,9 @@
           <Property Name="Facebook" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Twitter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
-          <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Updated_By" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Rooms" Relationship="Self.FK_Rooms_Hotel" FromRole="Hotels" ToRole="Rooms" />
         </EntityType>
@@ -131,9 +130,9 @@
           <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
-          <Property Name="Created_Date" Type="DateTime" Precision="0" />
+          <Property Name="Created_Date" Type="DateTime" Precision="3" />
           <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Updated_Date" Type="DateTime" Precision="0" />
+          <Property Name="Updated_Date" Type="DateTime" Precision="3" />
           <Property Name="Updated_By" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Hotel_ID" Type="Int64" />
           <NavigationProperty Name="Bookings" Relationship="Self.FK_Bookings_Rooms" FromRole="Rooms" ToRole="Bookings" />
@@ -180,58 +179,57 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DBHotelsModelStoreContainer" CdmEntityContainer="DBHotelsEntities">
-          <EntitySetMapping Name="Bookings">
-            <EntityTypeMapping TypeName="DBHotelsModel.Booking">
-              <MappingFragment StoreEntitySet="Bookings">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Booking_Date" ColumnName="Booking_Date" />
-                <ScalarProperty Name="Room_ID" ColumnName="Room_ID" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Hotels">
-            <EntityTypeMapping TypeName="DBHotelsModel.Hotel">
-              <MappingFragment StoreEntitySet="Hotels">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
-                <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
-                <ScalarProperty Name="Contatct_Person" ColumnName="Contatct_Person" />
-                <ScalarProperty Name="Website" ColumnName="Website" />
-                <ScalarProperty Name="Facebook" ColumnName="Facebook" />
-                <ScalarProperty Name="Twitter" ColumnName="Twitter" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
-                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
-                <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
-                <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Rooms">
-            <EntityTypeMapping TypeName="DBHotelsModel.Room">
-              <MappingFragment StoreEntitySet="Rooms">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Category" ColumnName="Category" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
-                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
-                <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
-                <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
-                <ScalarProperty Name="Hotel_ID" ColumnName="Hotel_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBHotelsModelStoreContainer" CdmEntityContainer="DBHotelsEntities">
+    <EntitySetMapping Name="Bookings">
+      <EntityTypeMapping TypeName="IsTypeOf(DBHotelsModel.Booking)">
+        <MappingFragment StoreEntitySet="Bookings">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Booking_Date" ColumnName="Booking_Date" />
+          <ScalarProperty Name="Room_ID" ColumnName="Room_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotels">
+      <EntityTypeMapping TypeName="IsTypeOf(DBHotelsModel.Hotel)">
+        <MappingFragment StoreEntitySet="Hotels">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+          <ScalarProperty Name="Contatct_Person" ColumnName="Contatct_Person" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+          <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="IsTypeOf(DBHotelsModel.Room)">
+        <MappingFragment StoreEntitySet="Rooms">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+          <ScalarProperty Name="Hotel_ID" ColumnName="Hotel_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -245,7 +243,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

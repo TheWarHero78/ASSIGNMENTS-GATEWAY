@@ -1,0 +1,41 @@
+{
+  "companies": [
+    {
+      "id": "43",
+      "email": "aarsh@gmail.com",
+      "name": "gdg",
+      "totalEmployee": 3,
+      "address": "34 t4veywu5jyyjyjyfu",
+      "isCompanyActive": "No",
+      "totalBranch": null,
+      "companyBranch": [
+        {
+          "branchId": "g",
+          "branchName": "434",
+          "address": "454"
+        },
+        {
+          "branchId": "6565",
+          "branchName": "hghg",
+          "address": "hgfh"
+        }
+      ]
+    },
+    {
+      "id": "7878",
+      "email": "pragya@gmail.com",
+      "name": "Pragya",
+      "totalEmployee": 5,
+      "address": " f  dkflklklk kglkdlkgdlklk",
+      "isCompanyActive": "Yes",
+      "totalBranch": null,
+      "companyBranch": [
+        {
+          "branchId": "633",
+          "branchName": "Security",
+          "address": "ijioivvffvvf"
+        }
+      ]
+    }
+  ]
+}
