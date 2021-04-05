@@ -32,9 +32,7 @@ namespace EMP.Controllers
                 Console.WriteLine(ex);
 
             }
-            return View("Error");
-                
-            
+            return View("Error");                            
             
         }
 

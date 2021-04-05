@@ -1,4 +1,5 @@
 ﻿using Emp.BusinessEntities.ViewModels;
+using EMP.MVC.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -21,13 +22,13 @@ namespace EMP.MVC.Controllers
             try
             {
                 UserViewModel user = new UserViewModel();
-                HttpResponseMessage response = GlobalVariable.webapiclient.PostAsJsonAsync("User", reg).Result;
+                HttpResponseMessage response = GlobalVariable.webapiclient.PostAsJsonAsync("User/GetUser", reg).Result;
                 if (response.IsSuccessStatusCode)
 
                     user = response.Content.ReadAsAsync<UserViewModel>().Result;
                 HttpContext.Session.SetString("Message", ("Welcome User " + user.Email));
 
-                return View("Dashboard");
+                return Redirect("Dashboard");
             }
             catch (Exception ex)
             {
@@ -35,6 +36,8 @@ namespace EMP.MVC.Controllers
             }
             return View("Error");
         }
+
+        [AuthenticationFilter]
         public IActionResult Dashboard()
         {
             ViewBag.Message = HttpContext.Session.GetString("Message");

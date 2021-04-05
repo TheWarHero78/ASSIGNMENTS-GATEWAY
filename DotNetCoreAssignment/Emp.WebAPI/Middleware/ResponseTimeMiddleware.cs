@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace Emp.WebAPI.Middleware
 {
+    /// <summary>
+    /// Middleware to measure and log ReponseTime 
+    /// </summary>
     public class ResponseTimeMiddleware
     {
         private readonly ILogger _logger;

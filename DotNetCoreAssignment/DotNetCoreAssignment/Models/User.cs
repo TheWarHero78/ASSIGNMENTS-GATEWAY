@@ -18,9 +18,8 @@ namespace DotNetCoreAssignment.Models
         public string Email { get; set; }
 
         [Required]
-        public string Password { get; set; }
-
-        public DateTime? LastLogin { get; set; }
+        public string Password { get; set; }       
+        public DateTime? LastLogin { get; set; }        
         public DateTime CreatedDate { get; set; }
 
         public DateTime? UpdatedDate { get; set; }

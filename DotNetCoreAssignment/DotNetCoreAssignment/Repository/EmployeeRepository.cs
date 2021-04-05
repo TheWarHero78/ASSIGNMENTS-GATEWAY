@@ -7,6 +7,9 @@ using System.Text;
 
 namespace DotNetCoreAssignment.Repository
 {
+    /// <summary>
+    /// Class for Employee Repository Extending Generic Repository and Implementing interface IEmployeeRepositoy
+    /// </summary>
     public class EmployeeRepository : GenericDataRepository<Employee>, IEmployeeRepository
     {
         protected readonly DbContext dbContext;

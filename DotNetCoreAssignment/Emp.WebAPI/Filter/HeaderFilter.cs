@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Emp.WebAPI.Filter
 {
+    /// <summary>
+    /// Class for adding extra header by extending IResultFilter
+    /// </summary>
     public class HeaderFilter : IResultFilter
     {
         public void OnResultExecuting(ResultExecutingContext context)

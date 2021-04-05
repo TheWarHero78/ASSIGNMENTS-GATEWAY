@@ -8,6 +8,11 @@ using System.Text;
 
 namespace DotNetCoreAssignment.Repository
 {
+
+    /// <summary>
+    /// Generic Data Repository Class implementing Generic Data Interface
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class GenericDataRepository<T> : IGenericDataRepository<T> where T : class
     {
         private readonly EmployeeDbContext context;
@@ -103,6 +108,5 @@ namespace DotNetCoreAssignment.Repository
         }
 
 
-        /* rest of code omitted */
     }
 }

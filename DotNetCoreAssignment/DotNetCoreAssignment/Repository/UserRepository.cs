@@ -7,6 +7,9 @@ using System.Text;
 
 namespace DotNetCoreAssignment.Repository
 {
+    /// <summary>
+    /// Class for User Repository Extending Generic Repository and Implementing interface IUserRepositoy
+    /// </summary>
     public class UserRepository : GenericDataRepository<User>, IUserRepository
     {
 

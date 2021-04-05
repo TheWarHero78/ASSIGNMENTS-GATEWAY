@@ -5,6 +5,10 @@ using System.Text;
 
 namespace DotNetCoreAssignment.Repository
 {
+    /// <summary>
+    /// Interface for GenericDataRepository with T as generic passing Model class when called
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public interface IGenericDataRepository<T> where T : class
     {
         IList<T> GetAll(params Expression<Func<T, object>>[] navigationProperties);

@@ -29,7 +29,8 @@ namespace Emp.WebAPI.Controllers
         
 
         [HttpPost]
-        public IActionResult GetUserById([FromBody] UserViewModel model)
+        [Route("GetUser")]
+        public IActionResult GetUser([FromBody] UserViewModel model)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Not a valid model");
@@ -55,16 +56,16 @@ namespace Emp.WebAPI.Controllers
 
     
 
-    [HttpPost]
-        public IActionResult CreateUser([FromBody] User model)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest("Not a valid model");
-            if (_context.AddUser(model))
-                return Ok();
-            else
-                return StatusCode(StatusCodes.Status500InternalServerError);
-        }
+    //[HttpPost]
+    //    public IActionResult CreateUser([FromBody] User model)
+    //    {
+    //        if (!ModelState.IsValid)
+    //            return BadRequest("Not a valid model");
+    //        if (_context.AddUser(model))
+    //            return Ok();
+    //        else
+    //            return StatusCode(StatusCodes.Status500InternalServerError);
+    //    }
 
         [HttpDelete("{Id}")]
         public IActionResult DeleteUser(int Id)
