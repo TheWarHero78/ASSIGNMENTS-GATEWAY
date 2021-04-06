@@ -1,6 +1,5 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
-// created by aarsh modi
 
 module.exports = function (config) {
   config.set({
@@ -26,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/aarshmodi-assignment5'),
+      dir: require('path').join(__dirname, './coverage/company-app'),
       subdir: '.',
       reporters: [
         { type: 'html' },

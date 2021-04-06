@@ -1,0 +1,16 @@
+{
+  "id": "1",
+  "email": "aarsh@gmail.com",
+  "name": "Aarsh Modi",
+  "totalEmployee": 20,
+  "address": "Abcd near XYZ, PQR",
+  "isCompanyActive": true,
+  "totalBranch": 4,
+  "companyBranch": [
+    {
+      "branchId": 1,
+      "branchName": "INSURANCE",
+      "address": "SOOOK OOO SOOIEWPOPO "
+    }
+  ]
+}

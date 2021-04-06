@@ -1,0 +1,27 @@
+<div class="card" style="width: 25rem; align-self: center">
+  <div class="card-body">
+    <h5 class="card-title">Company Details</h5>
+    <h6><b>ID: </b>{{ company.id }}</h6>
+    <h6><b>Email: </b>{{ company.email }}</h6>
+    <h6><b>Name: </b>{{ company.name }}</h6>
+    <h6><b>Total Employee: </b>{{ company.totalEmployee }}</h6>
+    <h6><b>Address: </b>{{ company.address }}</h6>
+    <h6><b>IsCompanyActive: </b>{{ company.isCompanyActive }}</h6>
+    <h6><b>TotalBranch: </b>{{ company.totalBranch }}</h6>
+    <div *ngFor="let CompanyBranch of company.companyBranch">
+      <h6><b>CompanyBranch :</b></h6>
+      <ul style="list-style-type:square" class="list-group list-group-flush">
+        <li class="list-group-item">
+          <h6><b>Branch ID : </b>{{ CompanyBranch.branchId }}</h6>
+        </li>
+        <li class="list-group-item">
+          <h6><b>Branch Name </b>{{ CompanyBranch.branchName }}</h6>
+        </li>
+        <li class="list-group-item">
+          <h6><b>Branch Address: </b>{{ CompanyBranch.address }}</h6>
+        </li>
+      </ul>
+    </div>
+    <button class="btn btn-primary mt-5" routerLink="">Back</button>
+  </div>
+</div>
