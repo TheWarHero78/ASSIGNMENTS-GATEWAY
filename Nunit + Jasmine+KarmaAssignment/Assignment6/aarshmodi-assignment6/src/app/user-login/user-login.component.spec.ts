@@ -13,13 +13,13 @@ describe('UserLoginComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         HttpClientModule,
-    ],
-      declarations: [ UserLoginComponent ],
+      ],
+      declarations: [UserLoginComponent],
       providers: [
-          HttpClient,
+        HttpClient,
       ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -32,17 +32,18 @@ describe('UserLoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should demonstrate isolated testing behavior for async with promises', async(() => {
+  it('should demonstrate isolated testing behavior for async with promises', fakeAsync(() => {
     component.authenticateUser().then(() => {
-        expect(component.userLoginAttemptCount).toBe(3);
+      expect(component.userLoginAttemptCount).toBe(3);
     });
 
     component.authenticateUser();
 
     component.authenticateUser();
-}));
+  }));
 
-it('should demonstrate isolated testing behavior for fakeAsync with promises', fakeAsync(() => {
+  it('should demonstrate isolated testing behavior for fakeAsync with promises', fakeAsync(() => {
+
     // Simulate a few user login
     component.authenticateUser();
     component.authenticateUser();
@@ -59,9 +60,9 @@ it('should demonstrate isolated testing behavior for fakeAsync with promises', f
     flush();
     expect(component.userLoginAttemptCount).toBe(5);
     expect(component.isMaxAttempt).toBe(true);
-}));
+  }));
 
-it('should demonstrate shallow testing behavior with a failing test for fakeAsync with promises', fakeAsync(() => {
+  it('should demonstrate shallow testing behavior with a failing test for fakeAsync with promises', fakeAsync(() => {
     component.authenticateUser();
 
     // Trigger resolution for the promise
@@ -77,9 +78,9 @@ it('should demonstrate shallow testing behavior with a failing test for fakeAsyn
     const htmlPostBonding = fixture.nativeElement.querySelector('h1');
 
     expect(htmlPostBonding.textContent).toBe('1');
-}));
+  }));
 
-it('should demonstrate shallow testing behavior for fakeAsync with promises', fakeAsync(() => {
+  it('should demonstrate shallow testing behavior for fakeAsync with promises', fakeAsync(() => {
     component.authenticateUser();
 
     // Trigger resolution for the promise
@@ -97,29 +98,29 @@ it('should demonstrate shallow testing behavior for fakeAsync with promises', fa
     const htmlPostBonding = fixture.nativeElement.querySelector('h1');
 
     expect(htmlPostBonding.textContent).toBe('1', 'data bindings now up to date after manual change detection');
-}));
+  }));
 
-it('should raise an exception for an HTTP request inside a fakeAsync method', fakeAsync(() => {
+  it('should raise an exception for an HTTP request inside a fakeAsync method', fakeAsync(() => {
     component.checkStatus();
     flush();
-}));
+  }));
 
-it('h1  via fakeAsync() and tick()', fakeAsync(() => {
-  expect(fixture.nativeElement.querySelector('h1').textContent).toBe('0');
+  it('h1  via fakeAsync() and tick()', fakeAsync(() => {
+    expect(fixture.nativeElement.querySelector('h1').textContent).toBe('0');
 
-  fixture.detectChanges();
+    fixture.detectChanges();
 
-  expect(fixture.nativeElement.querySelector('h1').textContent).toBe('0');
+    expect(fixture.nativeElement.querySelector('h1').textContent).toBe('0');
 
-  component.ngOnInit();
+    component.ngOnInit();
 
-  component.authenticateUser();
+    component.authenticateUser();
 
-  tick();
+    tick();
 
-  fixture.detectChanges();
+    fixture.detectChanges();
 
-  expect(fixture.nativeElement.querySelector('h1').textContent).toBe('1');
-}));
+    expect(fixture.nativeElement.querySelector('h1').textContent).toBe('1');
+  }));
 
 });

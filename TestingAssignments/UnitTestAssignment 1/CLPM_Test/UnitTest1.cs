@@ -18,6 +18,7 @@ namespace CLPM_Test
         {
             _passengerController = new PassengerController(mockDataRepo.Object);
         }
+
         [Fact]
         public void Test_GetAllPassengers()
         {
@@ -32,28 +33,31 @@ namespace CLPM_Test
         [Fact]
         public void Test_DeletePassenger()
         {   
-            //Arrange
+            // Arrange
             var passenger = new Passenger();
             passenger.PNumber = new System.Guid("1f02f425-800a-4f8d-aa8b-c1450981ce1e");
         
             var resultType = mockDataRepo.Setup(x => x.deletePassengerDetails(passenger.PNumber.ToString())).Returns(true);
-            //Act
+
+            // Act
             var response = _passengerController.deletePassengerDetails(passenger.PNumber.ToString());
-            //Assert
+
+            // Assert
             Assert.True(response);
         }
 
         [Fact]
         public void Test_GetUserById()
         {
-            //Arrange
+            // Arrange
             var passenger = new Passenger();
             passenger.PNumber = new System.Guid("3CDBC747-DB0A-4EF1-9353-6A1110DC05B9");
-
             var resultType = mockDataRepo.Setup(x => x.getPassengerByexID(passenger.PNumber.ToString())).Returns(passenger);
-            //Act
+
+            // Act
             var result = _passengerController.GetPassenger(passenger.PNumber.ToString());
-            //Assert
+
+            // Assert
             var isNull = Assert.IsType<OkNegotiatedContentResult<Passenger>>(result);
             Assert.NotNull(isNull);
         }

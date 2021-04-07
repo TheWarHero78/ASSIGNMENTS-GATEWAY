@@ -14,7 +14,7 @@ export class UserLoginComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  public authenticateUser(): Promise<any> {
+   public async authenticateUser()  {
       return new Promise(resolve => {
           resolve(1);
       }).then((res: number) => {
@@ -27,7 +27,7 @@ export class UserLoginComponent implements OnInit {
 
       });
   }
-  public checkStatus(): Promise<any> {
+  public async checkStatus() {
     return this._http.get<any>('https://httpstat.us/200').toPromise();
 }
 

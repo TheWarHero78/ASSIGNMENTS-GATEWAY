@@ -19,6 +19,7 @@ namespace AarshModi_CLPM.Controllers
         {
             _passengerManager = passengerManager;
         }
+
         [HttpPost]
         [Route("api/Passengers/registerPassenger")]
         public Passenger registerPassenger([FromBody]Passenger model)
@@ -37,6 +38,7 @@ namespace AarshModi_CLPM.Controllers
             return result;
 
         }
+
         [HttpDelete]
         [Route("api/Passengers/deletePassengerDetails")]
         public bool deletePassengerDetails(String id)
@@ -47,6 +49,7 @@ namespace AarshModi_CLPM.Controllers
 
 
         }
+
         [HttpGet]
         [Route("api/Passengers/GetPassenger")]
         public Passenger GetPassenger(String id)
@@ -64,6 +67,7 @@ namespace AarshModi_CLPM.Controllers
 
             }
         }
+
         [HttpGet]
         [Route("api/Passengers/getAllPassenger")]
         public IList<Passenger> getAllPassenger()

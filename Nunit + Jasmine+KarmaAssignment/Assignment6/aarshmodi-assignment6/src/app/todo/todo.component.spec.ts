@@ -90,7 +90,7 @@ describe('TodoComponent', () => {
     spyOn(todoService, 'deleteTodo').withArgs(1).and.returnValue(timer(1000).pipe(mapTo(Todo_ob)));
     component.deleteTodo();
     component.todo$.subscribe(todos => {
-      expect(todos).toHaveBeenCalled();
+      expect(todos).toBe(Todo_ob);
     });
     tick(1000);
     discardPeriodicTasks();

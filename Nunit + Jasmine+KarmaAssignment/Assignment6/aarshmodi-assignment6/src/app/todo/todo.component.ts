@@ -17,7 +17,7 @@ export class TodoComponent implements OnInit {
     this.todo$ = this.todoService.getTodo(1);
   }
 
-  updateTodo(): void {
+  updateTodo(){
     const uTodo_ob: Todo = {
       userId: 1,
       id: 1,
@@ -27,13 +27,13 @@ export class TodoComponent implements OnInit {
     this.todo$ = this.todoService.updateTodo(1, uTodo_ob);
   }
 
-  deleteTodo(): void {
+   deleteTodo() {
 
     this.todo$ = this.todoService.deleteTodo(1);
   }
 
-  getAllTodo():void{
-    this.todos$ = this.todoService.getAllTodo();
+    getAllTodo() {
+    this.todos$ =  this.todoService.getAllTodo();
   }
 
 
