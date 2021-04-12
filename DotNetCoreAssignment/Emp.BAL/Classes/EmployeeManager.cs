@@ -1,10 +1,7 @@
 ﻿using DotNetCoreAssignment.Models;
 using DotNetCoreAssignment.Repository;
 using Emp.BAL.Interface;
-using Emp.BusinessEntities.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Emp.BAL.Classes
 {
@@ -32,8 +29,8 @@ namespace Emp.BAL.Classes
         /// <param name="employee"></param>
         /// <returns> returns a boolean value indication that emplyoee is added or not</returns>
         public bool AddEmployee(Employee employee)
-        {         
-             return _employeeRepository.Add(employee);
+        {
+            return _employeeRepository.Add(employee);
         }
 
         /// <summary>
@@ -54,7 +51,7 @@ namespace Emp.BAL.Classes
         public IList<Employee> GetAllEmployees()
         {
             var model = _employeeRepository.GetAll();
-           
+
             return model;
 
         }
@@ -66,7 +63,7 @@ namespace Emp.BAL.Classes
         /// <returns>Returns a single employee with matching id</returns>
         public Employee GetEmployeeByID(long empID)
         {
-            var model = _employeeRepository.GetSingle(d => d.Id == empID);           
+            var model = _employeeRepository.GetSingle(d => d.Id == empID);
             return model;
         }
 

@@ -1,5 +1,3 @@
-using System;
-
 namespace EMP.Models
 {
     public class ErrorViewModel

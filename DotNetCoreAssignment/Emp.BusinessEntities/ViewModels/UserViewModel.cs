@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Emp.BusinessEntities.ViewModels
 {
-   public class UserViewModel
+    public class UserViewModel
     {
         public int Id { get; set; }
 

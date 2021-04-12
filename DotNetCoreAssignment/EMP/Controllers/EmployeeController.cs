@@ -27,13 +27,14 @@ namespace EMP.Controllers
                     ViewData["Message"] = "The current time is:" + DateTime.Now.ToString();
                     return View(employees);
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
 
             }
-            return View("Error");                            
-            
+            return View("Error");
+
         }
 
 
@@ -42,11 +43,12 @@ namespace EMP.Controllers
             List<EmployeeViewModel> manager;
             HttpResponseMessage response = GlobalVariable.webapiclient.GetAsync("Employee/GetEmployeeManagers").Result;
             manager = response.Content.ReadAsAsync<List<EmployeeViewModel>>().Result;
-            manager.Add(new EmployeeViewModel{
+            manager.Add(new EmployeeViewModel
+            {
                 Id = 0,
                 Name = "No Manager",
-            }); 
-              
+            });
+
             TempData["manager"] = new SelectList(manager, "Id", "Name");
             if (Id == 0)
             {
@@ -61,7 +63,7 @@ namespace EMP.Controllers
 
         public IActionResult Details(int Id = 0)
         {
-            HttpResponseMessage  response = GlobalVariable.webapiclient.GetAsync("Employee/" + Id.ToString()).Result;
+            HttpResponseMessage response = GlobalVariable.webapiclient.GetAsync("Employee/" + Id.ToString()).Result;
             return View(response.Content.ReadAsAsync<EmployeeViewModel>().Result);
         }
         [HttpPost]
@@ -73,15 +75,23 @@ namespace EMP.Controllers
             }
             else
             {
-                HttpResponseMessage response = GlobalVariable.webapiclient.PutAsJsonAsync("Employee/" , model).Result;
+                HttpResponseMessage response = GlobalVariable.webapiclient.PutAsJsonAsync("Employee/", model).Result;
             }
             return RedirectToAction("Index");
         }
-        
-        public IActionResult DeleteEmployee(int id)
+
+        public IActionResult Delete(int id)
         {
             HttpResponseMessage response = GlobalVariable.webapiclient.DeleteAsync("Employee/" + id.ToString()).Result;
-            return RedirectToAction("Index");
+          
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+
+            }
+            return RedirectToAction("Error", "Home");
+
+
         }
     }
 }

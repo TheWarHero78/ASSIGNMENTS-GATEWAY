@@ -1,10 +1,6 @@
-﻿using DotNetCoreAssignment.Models;
+﻿using AutoMapper;
+using DotNetCoreAssignment.Models;
 using Emp.BusinessEntities.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
 namespace Emp.WebAPI
 {
     /// <summary>
@@ -12,12 +8,12 @@ namespace Emp.WebAPI
     /// mapping profiles required for automapper 
     /// to map with other models
     /// </summary>
-    public class AutoMapperProfile:Profile
+    public class AutoMapperProfile : Profile
     {
         public AutoMapperProfile()
         {
             //Employee Configuration 
-            CreateMap<Employee,EmployeeViewModel>();
+            CreateMap<Employee, EmployeeViewModel>();
             CreateMap<EmployeeViewModel, Employee>();
 
             //User Configuration 

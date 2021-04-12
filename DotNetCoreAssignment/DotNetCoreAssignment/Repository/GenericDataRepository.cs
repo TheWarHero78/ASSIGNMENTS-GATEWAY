@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace DotNetCoreAssignment.Repository
 {
@@ -22,7 +21,7 @@ namespace DotNetCoreAssignment.Repository
         }
         public virtual bool Add(params T[] items)
         {
-            
+
             foreach (T item in items)
             {
                 context.Entry(item).State = EntityState.Added;
@@ -51,7 +50,7 @@ namespace DotNetCoreAssignment.Repository
                 context.Entry(item).State = EntityState.Deleted;
             }
             return context.SaveChanges() > 0;
-            
+
         }
         public virtual IList<T> GetAll(params Expression<Func<T, object>>[] navigationProperties)
         {

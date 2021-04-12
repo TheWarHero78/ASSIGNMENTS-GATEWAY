@@ -6,9 +6,6 @@ using Emp.WebAPI.Filter;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Emp.WebAPI.Controllers
 {
@@ -26,7 +23,7 @@ namespace Emp.WebAPI.Controllers
             _mapper = mapper;
         }
 
-        
+
 
         [HttpPost]
         [Route("GetUser")]
@@ -54,18 +51,18 @@ namespace Emp.WebAPI.Controllers
         }
 
 
-    
 
-    //[HttpPost]
-    //    public IActionResult CreateUser([FromBody] User model)
-    //    {
-    //        if (!ModelState.IsValid)
-    //            return BadRequest("Not a valid model");
-    //        if (_context.AddUser(model))
-    //            return Ok();
-    //        else
-    //            return StatusCode(StatusCodes.Status500InternalServerError);
-    //    }
+
+        //[HttpPost]
+        //    public IActionResult CreateUser([FromBody] User model)
+        //    {
+        //        if (!ModelState.IsValid)
+        //            return BadRequest("Not a valid model");
+        //        if (_context.AddUser(model))
+        //            return Ok();
+        //        else
+        //            return StatusCode(StatusCodes.Status500InternalServerError);
+        //    }
 
         [HttpDelete("{Id}")]
         public IActionResult DeleteUser(int Id)

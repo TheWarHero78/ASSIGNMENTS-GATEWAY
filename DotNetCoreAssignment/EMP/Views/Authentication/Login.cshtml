@@ -1,13 +1,16 @@
 ﻿
 @model Emp.BusinessEntities.ViewModels.UserViewModel
 
-@{ViewData["Title"] = "Login";}
+@{ViewData["Title"] = "Login";
 
+
+}
+<link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
 <div style="align-content:center">
     <h4 style="text-align:center">Login</h4>
     <div class="col-md-10 offset-1">
-        <div class="login-form-icon">
-            <i class="fas fa-user-circle fa-9x text-secondary"></i>
+        <div class="login-form-icon" align="center">
+            <i class="fa fa-user-circle fa-9x text-secondary"></i>
         </div>
         <form asp-action="Login">
             <div asp-validation-summary="All" class="text-danger"></div>
@@ -15,7 +18,7 @@
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <i class="fas fa-envelope"></i>
+                            <i class="fa fa-envelope"  aria-hidden="true"></i>
                         </div>
                     </div>
                     <input asp-for="Email" class="form-control" placeholder="Email Address" />
@@ -26,7 +29,7 @@
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <i class="fas fa-lock"></i>
+                            <i class="fa fa-unlock-alt"></i>
                         </div>
                     </div>
                     <input asp-for="Password" type="password" class="form-control" placeholder="Password" />

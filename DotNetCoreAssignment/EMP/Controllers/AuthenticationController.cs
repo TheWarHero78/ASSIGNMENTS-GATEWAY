@@ -3,10 +3,7 @@ using EMP.MVC.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace EMP.MVC.Controllers
 {
@@ -28,7 +25,7 @@ namespace EMP.MVC.Controllers
                     user = response.Content.ReadAsAsync<UserViewModel>().Result;
                 HttpContext.Session.SetString("Message", ("Welcome User " + user.Email));
 
-                return Redirect("Dashboard");
+                return RedirectToAction("Dashboard");
             }
             catch (Exception ex)
             {

@@ -9,6 +9,7 @@
 <p>
 <p>
     @Html.Label("", ViewData["Message"].ToString())
+    <br />
     <a href="@Url.Action("Create","Employee")" class="btn btn-primary"><i class="fa fa-plus"></i>Add Employee</a>
 </p>
 </p>
@@ -39,7 +40,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            <th></th>
+            <th>Operation</th>
         </tr>
     </thead>
     <tbody>
@@ -71,9 +72,10 @@
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
                 <td>
-                    <a href="@Url.Action("Create","Employee",new { id=item.Id})" class="btn btn-warning"><i class="fa fa-pencil"></i>Edit</a> |
-                    <a href="@Url.Action("Details","Employee",new { id=item.Id})" class="btn btn-primary"><i class="fa fa-pencil"></i>Details</a> |                   
-                    <a href="@Url.Action("DeleteEmployee","Employee",new { id=item.Id})" class="btn btn-danger"><i class="fa fa-trash"></i>Delete</a>
+                    <a href="@Url.Action("Create","Employee",new { id=item.Id})" class="btn btn-warning"><i class="fa fa-pencil-square"></i>Edit</a> |
+                    <a href="@Url.Action("Details","Employee",new { id=item.Id})" class="btn btn-primary"><i class="fa fa-info-circle"></i>Details</a> |
+                    <a href="@Url.Action("Delete","Employee",new { id=item.Id})" class="btn btn-danger" onclick="return confirm('Are you sure to delete this employee?')"><i class="fa fa-trash-alt fa-lg"></i>Delete</a>
+
                 </td>
             </tr>
         }

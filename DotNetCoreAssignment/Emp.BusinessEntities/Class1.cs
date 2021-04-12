@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Emp.BusinessEntities
+﻿namespace Emp.BusinessEntities
 {
     public class Class1
     {

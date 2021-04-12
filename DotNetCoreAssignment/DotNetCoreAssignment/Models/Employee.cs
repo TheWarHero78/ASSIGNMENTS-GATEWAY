@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace DotNetCoreAssignment.Models
 {
@@ -13,7 +10,7 @@ namespace DotNetCoreAssignment.Models
         [MaxLength(15), MinLength(3)]
         public string Name { get; set; }
         [Required]
-        [MaxLength(15), MinLength(3)]        
+        [MaxLength(15), MinLength(3)]
         public string Department { get; set; }
         [Required]
         public decimal Salary { get; set; }
@@ -23,6 +20,6 @@ namespace DotNetCoreAssignment.Models
         [Required]
         public string Email { get; set; }
 
-        
+
     }
 }

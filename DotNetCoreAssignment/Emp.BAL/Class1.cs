@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Emp.BAL
+﻿namespace Emp.BAL
 {
     public class Class1
     {

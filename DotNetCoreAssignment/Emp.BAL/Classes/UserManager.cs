@@ -1,13 +1,11 @@
 ﻿using DotNetCoreAssignment.Models;
 using DotNetCoreAssignment.Repository;
 using Emp.BAL.Interface;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Emp.BAL.Classes
 {
-   public class UserManager :IUser
+    public class UserManager : IUser
     {
         private readonly IUserRepository _userRepository;
 
@@ -79,7 +77,7 @@ namespace Emp.BAL.Classes
         /// <returns>Returns a user object</returns>
         public User Validate(User user)
         {
-            var user1 = _userRepository.GetSingle(d => d.Email == user.Email && d.Password==user.Password);
+            var user1 = _userRepository.GetSingle(d => d.Email == user.Email && d.Password == user.Password);
             return user1;
         }
     }

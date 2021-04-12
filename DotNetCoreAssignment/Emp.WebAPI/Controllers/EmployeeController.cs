@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using DotNetCoreAssignment.Models;
-using Emp.BAL.Classes;
 using Emp.BAL.Interface;
 using Emp.BusinessEntities.ViewModels;
 using Emp.WebAPI.Filter;
@@ -8,8 +7,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Emp.WebAPI.Controllers
 {
@@ -37,8 +34,8 @@ namespace Emp.WebAPI.Controllers
                 IList<Employee> employee = _context.GetAllEmployees();
                 if (employee.Count > 0)
                 {
-                  //  IList<EmployeeViewModel> empvm = null;
-                    
+                    //  IList<EmployeeViewModel> empvm = null;
+
                     return Ok(_mapper.Map<IList<EmployeeViewModel>>(employee));
                 }
                 else
