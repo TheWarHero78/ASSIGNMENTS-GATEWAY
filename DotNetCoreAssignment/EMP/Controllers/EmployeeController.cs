@@ -14,7 +14,7 @@ namespace EMP.Controllers
     [AuthenticationFilter]
     public class EmployeeController : Controller
     {
-        [ResponseCache(Duration = 50000)]
+        [ResponseCache(Duration = 500)]
         public IActionResult Index()
         {
             try
@@ -33,7 +33,7 @@ namespace EMP.Controllers
                 Console.WriteLine(ex);
 
             }
-            return View("Error");
+            return RedirectToAction("Error","Home");
 
         }
 

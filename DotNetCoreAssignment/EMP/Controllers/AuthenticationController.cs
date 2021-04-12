@@ -40,7 +40,14 @@ namespace EMP.MVC.Controllers
             ViewBag.Message = HttpContext.Session.GetString("Message");
             return View();
         }
+        [AuthenticationFilter]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
 
+
+            return RedirectToAction("Login");
+        }
 
     }
 }
