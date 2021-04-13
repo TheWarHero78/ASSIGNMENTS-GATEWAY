@@ -33,7 +33,7 @@ namespace Emp.WebAPI.Controllers
                 return BadRequest("Not a valid model");
             try
             {
-                User user = _context.Validate(_mapper.Map<User>(model));
+                var user = _context.Validate(_mapper.Map<User>(model));
                 if (user != null)
                 {
                     return Ok(_mapper.Map<UserViewModel>(user));
@@ -67,20 +67,14 @@ namespace Emp.WebAPI.Controllers
         [HttpDelete("{Id}")]
         public IActionResult DeleteUser(int Id)
         {
-            if (_context.RemoveUser(Id))
-                return Ok();
-            else
-                return StatusCode(StatusCodes.Status500InternalServerError);
+            return _context.RemoveUser(Id) ? Ok() : StatusCode(StatusCodes.Status500InternalServerError);
         }
         [HttpPut]
         public IActionResult UpdateUser([FromBody] User model)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Not a valid model");
-            if (_context.UpdateUser(model))
-                return Ok();
-            else
-                return StatusCode(StatusCodes.Status500InternalServerError);
+            return _context.UpdateUser(model) ? Ok() : StatusCode(StatusCodes.Status500InternalServerError);
         }
     }
 }

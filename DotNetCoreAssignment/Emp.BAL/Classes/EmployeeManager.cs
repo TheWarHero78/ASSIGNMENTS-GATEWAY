@@ -39,7 +39,7 @@ namespace Emp.BAL.Classes
         /// <returns>Returns a list employees</returns>
         public IList<Employee> GetAllEmployeeManagers()
         {
-            var model = _employeeRepository.GetList(d => d.IsManager == true);
+            var model = _employeeRepository.GetList(d => d.IsManager);
 
             return model;
         }

@@ -18,14 +18,14 @@ namespace EMP.MVC.Controllers
         {
             try
             {
-                UserViewModel user = new UserViewModel();
-                HttpResponseMessage response = GlobalVariable.webapiclient.PostAsJsonAsync("User/GetUser", reg).Result;
+                var user = new UserViewModel();
+                var response = GlobalVariable.webapiclient.PostAsJsonAsync("User/GetUser", reg).Result;
                 if (response.IsSuccessStatusCode)
 
                     user = response.Content.ReadAsAsync<UserViewModel>().Result;
                 HttpContext.Session.SetString("Message", ("Welcome User " + user.Email));
 
-                return RedirectToAction("Dashboard");
+                return RedirectToAction(nameof(Dashboard));
             }
             catch (Exception ex)
             {
@@ -46,7 +46,7 @@ namespace EMP.MVC.Controllers
             HttpContext.Session.Clear();
 
 
-            return RedirectToAction("Login");
+            return RedirectToAction(nameof(Login));
         }
 
     }

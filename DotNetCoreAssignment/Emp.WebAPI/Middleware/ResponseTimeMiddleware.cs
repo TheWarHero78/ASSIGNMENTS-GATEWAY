@@ -30,10 +30,11 @@ namespace Emp.WebAPI.Middleware
                 watch.Stop();
                 var responseTimeForCompleteRequest = watch.ElapsedMilliseconds;
                 // Add the Response time information in the Response headers.   
-                _logger.LogInformation(RESPONSE_HEADER_RESPONSE_TIME + ":" + responseTimeForCompleteRequest.ToString());
+                _logger.LogInformation(RESPONSE_HEADER_RESPONSE_TIME + ":" + responseTimeForCompleteRequest);
                 context.Response.Headers[RESPONSE_HEADER_RESPONSE_TIME] = responseTimeForCompleteRequest.ToString();
                 return Task.CompletedTask;
             });
+
             // Call the next delegate/middleware in the pipeline   
             return this._next(context);
         }

@@ -5,6 +5,7 @@ using Emp.BusinessEntities.ViewModels;
 using Emp.WebAPI.Filter;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 
@@ -20,10 +21,13 @@ namespace Emp.WebAPI.Controllers
     {
         private readonly IEmployee _context;
         private readonly IMapper _mapper;
-        public EmployeeController(IEmployee context, IMapper mapper)
+        private readonly ILogger _logger;
+
+        public EmployeeController(IEmployee context, IMapper mapper, ILogger<EmployeeController> logger)
         {
             _context = context;
             _mapper = mapper;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -31,21 +35,13 @@ namespace Emp.WebAPI.Controllers
         {
             try
             {
-                IList<Employee> employee = _context.GetAllEmployees();
-                if (employee.Count > 0)
-                {
-                    //  IList<EmployeeViewModel> empvm = null;
-
-                    return Ok(_mapper.Map<IList<EmployeeViewModel>>(employee));
-                }
-                else
-                {
-                    return StatusCode(StatusCodes.Status204NoContent);
-                }
+                var employee = _context.GetAllEmployees();
+                return employee.Count > 0 ? (IActionResult)Ok(_mapper.Map<IList<EmployeeViewModel>>(employee)) : StatusCode(StatusCodes.Status204NoContent);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                _logger.LogDebug(ex, ex.Message);
+
             }
             return StatusCode(StatusCodes.Status500InternalServerError);
         }
@@ -55,19 +51,12 @@ namespace Emp.WebAPI.Controllers
         {
             try
             {
-                IList<Employee> employee = _context.GetAllEmployeeManagers();
-                if (employee.Count > 0)
-                {
-                    return Ok(employee);
-                }
-                else
-                {
-                    return StatusCode(StatusCodes.Status204NoContent);
-                }
+                var employee = _context.GetAllEmployeeManagers();
+                return employee.Count > 0 ? Ok(employee) : (IActionResult)StatusCode(StatusCodes.Status204NoContent);
             }
             catch (Exception ex)
             {
-
+                _logger.LogDebug(ex, ex.Message);
             }
             return StatusCode(StatusCodes.Status500InternalServerError);
         }
@@ -81,18 +70,11 @@ namespace Emp.WebAPI.Controllers
             try
             {
                 var employee = _context.GetEmployeeByID(Id);
-                if (employee != null)
-                {
-                    return Ok(_mapper.Map<EmployeeViewModel>(employee));
-                }
-                else
-                {
-                    return StatusCode(StatusCodes.Status204NoContent);
-                }
+                return employee != null ? Ok(_mapper.Map<EmployeeViewModel>(employee)) : (IActionResult)StatusCode(StatusCodes.Status204NoContent);
             }
             catch (Exception ex)
             {
-
+                _logger.LogDebug(ex, ex.Message);
             }
             return StatusCode(StatusCodes.Status500InternalServerError);
         }
@@ -105,14 +87,11 @@ namespace Emp.WebAPI.Controllers
                 return BadRequest("Not a valid model");
             try
             {
-                if (_context.AddEmployee(_mapper.Map<Employee>(model)))
-                    return Ok();
-                else
-                    return StatusCode(StatusCodes.Status304NotModified);
+                return _context.AddEmployee(_mapper.Map<Employee>(model)) ? Ok() : StatusCode(StatusCodes.Status304NotModified);
             }
             catch (Exception ex)
             {
-
+                _logger.LogDebug(ex, ex.Message);
             }
             return StatusCode(StatusCodes.Status500InternalServerError);
         }
@@ -126,14 +105,11 @@ namespace Emp.WebAPI.Controllers
             }
             try
             {
-                if (_context.RemoveEmployee(Id))
-                    return Ok();
-                else
-                    return StatusCode(StatusCodes.Status304NotModified);
+                return _context.RemoveEmployee(Id) ? Ok() : StatusCode(StatusCodes.Status304NotModified);
             }
             catch (Exception ex)
             {
-
+                _logger.LogDebug(ex, ex.Message);
             }
             return StatusCode(StatusCodes.Status500InternalServerError);
         }
@@ -145,13 +121,11 @@ namespace Emp.WebAPI.Controllers
                 return BadRequest("Not a valid model");
             try
             {
-                if (_context.UpdateEmployee(_mapper.Map<Employee>(model)))
-                    return Ok();
-                else
-                    return StatusCode(StatusCodes.Status500InternalServerError);
+                return _context.UpdateEmployee(_mapper.Map<Employee>(model)) ? Ok() : StatusCode(StatusCodes.Status500InternalServerError);
             }
             catch (Exception ex)
             {
+                _logger.LogDebug(ex, ex.Message);
 
             }
             return StatusCode(StatusCodes.Status500InternalServerError);

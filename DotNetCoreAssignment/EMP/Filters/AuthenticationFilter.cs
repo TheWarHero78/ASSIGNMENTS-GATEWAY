@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Routing;
 
 namespace EMP.MVC.Filters
 {
-    public class AuthenticationFilter : ActionFilterAttribute
+    public  class AuthenticationFilter : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             if (filterContext.HttpContext.Session.GetString("Message") == null)
             {
-                RouteValueDictionary redirectTargetDictionary = new RouteValueDictionary();
+                var redirectTargetDictionary = new RouteValueDictionary();
                 redirectTargetDictionary.Add("action", "Login");
                 redirectTargetDictionary.Add("controller", "Authentication");
                 redirectTargetDictionary.Add("area", "");

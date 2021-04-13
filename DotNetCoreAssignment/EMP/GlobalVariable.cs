@@ -6,7 +6,7 @@ namespace EMP
 {
     public static class GlobalVariable
     {
-        public static HttpClient webapiclient = new HttpClient();
+        public static readonly HttpClient webapiclient = new HttpClient();
         static GlobalVariable()
         {
             webapiclient.BaseAddress = new Uri("https://localhost:44304/api/");
