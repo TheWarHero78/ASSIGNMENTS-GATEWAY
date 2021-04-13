@@ -33,32 +33,41 @@ namespace EMP.Controllers
                 Console.WriteLine(ex);
 
             }
-            return RedirectToAction("Error","Home");
+            return RedirectToAction("Error", "Home");
 
         }
 
 
         public IActionResult Create(int Id = 0)
         {
-            List<EmployeeViewModel> manager;
-            var response = GlobalVariable.webapiclient.GetAsync("Employee/GetEmployeeManagers").Result;
-            manager = response.Content.ReadAsAsync<List<EmployeeViewModel>>().Result;
-            manager.Add(new EmployeeViewModel
+            try
             {
-                Id = 0,
-                Name = "No Manager",
-            });
+                List<EmployeeViewModel> manager;
+                var response = GlobalVariable.webapiclient.GetAsync("Employee/GetEmployeeManagers").Result;
+                manager = response.Content.ReadAsAsync<List<EmployeeViewModel>>().Result;
+                manager.Add(new EmployeeViewModel
+                {
+                    Id = 0,
+                    Name = "No Manager",
+                });
 
-            TempData["manager"] = new SelectList(manager, "Id", "Name");
-            if (Id == 0)
-            {
-                return View(new EmployeeViewModel());
+                TempData["manager"] = new SelectList(manager, "Id", "Name");
+                if (Id == 0)
+                {
+                    return View(new EmployeeViewModel());
+                }
+                else
+                {
+                    response = GlobalVariable.webapiclient.GetAsync("Employee/" + Id).Result;
+                    return View(response.Content.ReadAsAsync<EmployeeViewModel>().Result);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                response = GlobalVariable.webapiclient.GetAsync("Employee/" + Id).Result;
-                return View(response.Content.ReadAsAsync<EmployeeViewModel>().Result);
+                Console.WriteLine(ex);
+
             }
+            return RedirectToAction("Error", "Home");
         }
 
         public IActionResult Details(int Id = 0)
@@ -69,28 +78,58 @@ namespace EMP.Controllers
         [HttpPost]
         public IActionResult Create(EmployeeViewModel model)
         {
-            if (model.Id == 0)
+            try
             {
-                var response = GlobalVariable.webapiclient.PostAsJsonAsync("Employee", model).Result;
-            }
-            else
-            {
-                var response = GlobalVariable.webapiclient.PutAsJsonAsync("Employee/", model).Result;
-            }
-            return RedirectToAction(nameof(Index));
-        }
+                if (!ModelState.IsValid)
+                {
+                    List<EmployeeViewModel> manager;
+                    var response = GlobalVariable.webapiclient.GetAsync("Employee/GetEmployeeManagers").Result;
+                    manager = response.Content.ReadAsAsync<List<EmployeeViewModel>>().Result;
+                    manager.Add(new EmployeeViewModel
+                    {
+                        Id = 0,
+                        Name = "No Manager",
+                    });
 
-        public IActionResult Delete(int id)
-        {
-            var response = GlobalVariable.webapiclient.DeleteAsync("Employee/" + id).Result;
-          
-            if (response.IsSuccessStatusCode)
-            {
+                    TempData["manager"] = new SelectList(manager, "Id", "Name");
+                    return View(model);
+                }
+                if (model.Id == 0)
+                {
+                    var response = GlobalVariable.webapiclient.PostAsJsonAsync("Employee", model).Result;
+                }
+                else
+                {
+                    var response = GlobalVariable.webapiclient.PutAsJsonAsync("Employee/", model).Result;
+                }
                 return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
 
             }
             return RedirectToAction("Error", "Home");
+        }
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                var response = GlobalVariable.webapiclient.DeleteAsync("Employee/" + id).Result;
 
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction(nameof(Index));
+
+                }
+                return RedirectToAction("Error", "Home");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+
+            }
+            return RedirectToAction("Error", "Home");
 
         }
     }

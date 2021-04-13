@@ -6,13 +6,13 @@ namespace Emp.BusinessEntities.ViewModels
     public class EmployeeViewModel
     {
         public int Id { get; set; }
-        [Required]
+        [Required(AllowEmptyStrings = false)]
         [StringLength(25)]
         public string Name { get; set; }
-        [Required]
+        [Required(AllowEmptyStrings = false)]
         [StringLength(15)]
         public string Department { get; set; }
-        [Required]
+        [Required(AllowEmptyStrings = false)]
 
         [Range(100,100000)]
         public decimal Salary { get; set; }
