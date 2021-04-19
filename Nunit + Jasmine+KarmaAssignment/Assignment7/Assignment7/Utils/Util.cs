@@ -117,13 +117,13 @@ namespace Assignment7.Utils
         /// </summary>
         /// <param name="x"></param>
         /// <returns></returns>
-        public int GetZero(int x)
+        public int GetOne(int x)
         {
-            if (x<0)
+            if (x<1)
             {
                 throw new ArgumentException();
             }
-            while (x > 0)
+            while (x > 1)
             {
                 x--;
             }

@@ -4592,11 +4592,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment7\\Assignment7.test\\Assignment7.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment7\\Assignment7.test\\Assignment7.Tests.csproj",
       "projectName": "Assignment7.Tests",
-      "projectPath": "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment7\\Assignment7.test\\Assignment7.Tests.csproj",
+      "projectPath": "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment7\\Assignment7.test\\Assignment7.Tests.csproj",
       "packagesPath": "C:\\Users\\aarsh.modi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment7\\Assignment7.test\\obj\\",
+      "outputPath": "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment7\\Assignment7.test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aarsh.modi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4613,8 +4613,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment7\\Assignment7\\Assignment7.csproj": {
-              "projectPath": "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment7\\Assignment7\\Assignment7.csproj"
+            "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment7\\Assignment7\\Assignment7.csproj": {
+              "projectPath": "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment7\\Assignment7\\Assignment7.csproj"
             }
           }
         }

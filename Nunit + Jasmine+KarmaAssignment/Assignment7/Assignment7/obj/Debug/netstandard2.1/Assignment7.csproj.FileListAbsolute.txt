@@ -7,3 +7,12 @@ C:\Users\aarsh.modi\Source\Repos\Assignment7\Assignment7\obj\Debug\netstandard2.
 C:\Users\aarsh.modi\Source\Repos\Assignment7\Assignment7\obj\Debug\netstandard2.1\Assignment7.csproj.CoreCompileInputs.cache
 C:\Users\aarsh.modi\Source\Repos\Assignment7\Assignment7\obj\Debug\netstandard2.1\Assignment7.dll
 C:\Users\aarsh.modi\Source\Repos\Assignment7\Assignment7\obj\Debug\netstandard2.1\Assignment7.pdb
+C:\Users\aarsh.modi\GATEWAY-ASSIGNMENTS\Nunit + Jasmine+KarmaAssignment\Assignment7\Assignment7\bin\Debug\netstandard2.1\Assignment7.deps.json
+C:\Users\aarsh.modi\GATEWAY-ASSIGNMENTS\Nunit + Jasmine+KarmaAssignment\Assignment7\Assignment7\bin\Debug\netstandard2.1\Assignment7.dll
+C:\Users\aarsh.modi\GATEWAY-ASSIGNMENTS\Nunit + Jasmine+KarmaAssignment\Assignment7\Assignment7\bin\Debug\netstandard2.1\Assignment7.pdb
+C:\Users\aarsh.modi\GATEWAY-ASSIGNMENTS\Nunit + Jasmine+KarmaAssignment\Assignment7\Assignment7\obj\Debug\netstandard2.1\Assignment7.csprojAssemblyReference.cache
+C:\Users\aarsh.modi\GATEWAY-ASSIGNMENTS\Nunit + Jasmine+KarmaAssignment\Assignment7\Assignment7\obj\Debug\netstandard2.1\Assignment7.AssemblyInfoInputs.cache
+C:\Users\aarsh.modi\GATEWAY-ASSIGNMENTS\Nunit + Jasmine+KarmaAssignment\Assignment7\Assignment7\obj\Debug\netstandard2.1\Assignment7.AssemblyInfo.cs
+C:\Users\aarsh.modi\GATEWAY-ASSIGNMENTS\Nunit + Jasmine+KarmaAssignment\Assignment7\Assignment7\obj\Debug\netstandard2.1\Assignment7.csproj.CoreCompileInputs.cache
+C:\Users\aarsh.modi\GATEWAY-ASSIGNMENTS\Nunit + Jasmine+KarmaAssignment\Assignment7\Assignment7\obj\Debug\netstandard2.1\Assignment7.dll
+C:\Users\aarsh.modi\GATEWAY-ASSIGNMENTS\Nunit + Jasmine+KarmaAssignment\Assignment7\Assignment7\obj\Debug\netstandard2.1\Assignment7.pdb

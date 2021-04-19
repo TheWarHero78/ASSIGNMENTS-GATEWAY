@@ -71,6 +71,20 @@ namespace Assignment7.Tests
             Assert.That(result == total);
         }
 
+        /// <summary>
+        /// Test method for GetOne method
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        [TestCase(10,1)]
+        public void TestGetOne(int a,int b)
+        {
+            Util u = new Util();
+            double result = u.GetOne(a);
+            Assert.That(result == b);
+        }
+
+
 
         /// <summary>
         /// Test method to handle exception for calculateDiscount method
@@ -78,7 +92,7 @@ namespace Assignment7.Tests
         /// <param name="salesamt"></param>
         /// <param name="expectedDiscount"></param>
         [TestCase(0, 0)]
-        public void TestCalculateDiscountexception(double salesamt, double expectedDiscount)
+        public void TestCalculateDiscountException(double salesamt, double expectedDiscount)
         {
             Util u = new Util();
             Assert.That(() => u.CalculateDiscount(salesamt), Throws.TypeOf<ArgumentException>());
@@ -91,7 +105,7 @@ namespace Assignment7.Tests
         /// </summary>
         /// <param name="colorname"></param>
         [TestCase(null)]
-        public void TestCheckIsColorexception(String colorname)
+        public void TestCheckIsColorException(String colorname)
         {
             Util u = new Util();
             Assert.That(() => u.CheckIsColor(colorname), Throws.TypeOf<ArgumentNullException>());
@@ -104,7 +118,7 @@ namespace Assignment7.Tests
         /// <param name="numbers"></param>
         /// <param name="mark"></param>
         [TestCase(new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 91, 100, 101 }, 30)]
-        public void TestgetMaximumMarksexception(int[] numbers, int mark)
+        public void TestGetMaximumMarksException(int[] numbers, int mark)
         {
             Util u = new Util();
             Assert.That(() => u.GetMaximumMarks(numbers), Throws.TypeOf<ArgumentOutOfRangeException>());
@@ -116,13 +130,18 @@ namespace Assignment7.Tests
         /// <param name="numbers"></param>
         /// <param name="total"></param>
         [TestCase(new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 91, 100, 101 }, 30)]
-        public void TestFindSumexception(int[] numbers, int total)
+        public void TestFindSumxception(int[] numbers, int total)
         {
             Util u = new Util();
             Assert.That(() => u.FindSum(numbers), Throws.TypeOf<ArgumentOutOfRangeException>());
         }
 
-
+        [TestCase(0)]
+        public void TestGetOneException(int a)
+        {
+            Util u = new Util();
+            Assert.That(() => u.GetOne(a), Throws.TypeOf<ArgumentException>());
+        }
 
 
     }
