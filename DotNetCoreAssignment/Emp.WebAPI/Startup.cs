@@ -26,9 +26,9 @@ namespace Emp.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            //services.AddAutoMapper(typeof(Startup));
-            services.AddControllers();
+          
+                        //services.AddAutoMapper(typeof(Startup));
+                        services.AddControllers();
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new AutoMapperProfile());
@@ -44,7 +44,7 @@ namespace Emp.WebAPI
                     assembly => assembly.MigrationsAssembly(typeof(EmployeeDbContext).Assembly.FullName));
             });
             services.AddControllersWithViews().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore).AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
-
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
@@ -65,7 +65,13 @@ namespace Emp.WebAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
 
+            // custom jwt auth middleware
+            app.UseMiddleware<JwtMiddleware>();
             app.UseAuthorization();
             app.UseMiddleware<ResponseTimeMiddleware>();
             app.UseEndpoints(endpoints =>

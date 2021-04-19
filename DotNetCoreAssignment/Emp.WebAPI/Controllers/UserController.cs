@@ -36,6 +36,7 @@ namespace Emp.WebAPI.Controllers
                 var user = _context.Validate(_mapper.Map<User>(model));
                 if (user != null)
                 {
+                   String token= CreateToken(user);
                     return Ok(_mapper.Map<UserViewModel>(user));
                 }
                 else
@@ -48,6 +49,11 @@ namespace Emp.WebAPI.Controllers
                 Console.WriteLine(ex.Message);
             }
             return StatusCode(StatusCodes.Status500InternalServerError);
+        }
+
+        private string CreateToken(User user)
+        {
+            return string.Empty; //token;
         }
 
 

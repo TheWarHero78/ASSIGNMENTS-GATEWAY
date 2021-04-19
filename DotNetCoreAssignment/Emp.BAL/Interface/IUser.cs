@@ -11,5 +11,6 @@ namespace Emp.BAL.Interface
         bool AddUser(User user);
         bool UpdateUser(User user);
         bool RemoveUser(long usID);
+      
     }
 }
