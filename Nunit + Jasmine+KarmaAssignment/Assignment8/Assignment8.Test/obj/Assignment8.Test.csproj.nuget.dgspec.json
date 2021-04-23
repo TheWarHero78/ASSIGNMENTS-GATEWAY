@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment8\\Assignment8.Test\\Assignment8.Test.csproj": {}
+    "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment8\\Assignment8.Test\\Assignment8.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment8\\Assignment8.Test\\Assignment8.Test.csproj": {
+    "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment8\\Assignment8.Test\\Assignment8.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment8\\Assignment8.Test\\Assignment8.Test.csproj",
+        "projectUniqueName": "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment8\\Assignment8.Test\\Assignment8.Test.csproj",
         "projectName": "Assignment8.Test",
-        "projectPath": "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment8\\Assignment8.Test\\Assignment8.Test.csproj",
+        "projectPath": "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment8\\Assignment8.Test\\Assignment8.Test.csproj",
         "packagesPath": "C:\\Users\\aarsh.modi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment8\\Assignment8.Test\\obj\\",
+        "outputPath": "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment8\\Assignment8.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aarsh.modi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment8\\Assignment8\\Assignment8.csproj": {
-                "projectPath": "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment8\\Assignment8\\Assignment8.csproj"
+              "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment8\\Assignment8\\Assignment8.csproj": {
+                "projectPath": "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment8\\Assignment8\\Assignment8.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment8\\Assignment8\\Assignment8.csproj": {
+    "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment8\\Assignment8\\Assignment8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment8\\Assignment8\\Assignment8.csproj",
+        "projectUniqueName": "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment8\\Assignment8\\Assignment8.csproj",
         "projectName": "Assignment8",
-        "projectPath": "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment8\\Assignment8\\Assignment8.csproj",
+        "projectPath": "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment8\\Assignment8\\Assignment8.csproj",
         "packagesPath": "C:\\Users\\aarsh.modi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aarsh.modi\\Source\\Repos\\Assignment8\\Assignment8\\obj\\",
+        "outputPath": "C:\\Users\\aarsh.modi\\GATEWAY-ASSIGNMENTS\\Nunit + Jasmine+KarmaAssignment\\Assignment8\\Assignment8\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aarsh.modi\\AppData\\Roaming\\NuGet\\NuGet.Config",

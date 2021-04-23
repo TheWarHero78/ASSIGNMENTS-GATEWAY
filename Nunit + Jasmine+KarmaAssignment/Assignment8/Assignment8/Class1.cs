@@ -4,7 +4,11 @@ namespace Assignment8
 {
     public class Class1
     {
-        public int getDivision()
+        /// <summary>
+        /// Method for raising dividebyzero exception
+        /// </summary>
+        /// <returns></returns>
+        public int GetDivision()
         {
             int x = 10;
             int y = 0;

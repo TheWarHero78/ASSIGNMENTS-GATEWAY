@@ -6,8 +6,10 @@ using NUnit.Framework;
 
 namespace Assignment8.Test
 {
-    
 
+    /// <summary>
+    /// Test class for making serial order of execution of test cases.
+    /// </summary>
     public class TestStructure
     {
         public Action Test;

@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Assignment8
 {
+    /// <summary>
+    ///Class contains extension method for enumerable for generic enum to string
+    /// </summary>
     public static class EnumerableExtensions
     {
         public static string ToString<T>(this IEnumerable<T> items, string separator)
