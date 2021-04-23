@@ -1,0 +1,9 @@
+C:\Users\aarsh.modi\Source\Repos\Assignment8\Assignment8\bin\Debug\netstandard2.1\Assignment8.deps.json
+C:\Users\aarsh.modi\Source\Repos\Assignment8\Assignment8\bin\Debug\netstandard2.1\Assignment8.dll
+C:\Users\aarsh.modi\Source\Repos\Assignment8\Assignment8\bin\Debug\netstandard2.1\Assignment8.pdb
+C:\Users\aarsh.modi\Source\Repos\Assignment8\Assignment8\obj\Debug\netstandard2.1\Assignment8.csprojAssemblyReference.cache
+C:\Users\aarsh.modi\Source\Repos\Assignment8\Assignment8\obj\Debug\netstandard2.1\Assignment8.AssemblyInfoInputs.cache
+C:\Users\aarsh.modi\Source\Repos\Assignment8\Assignment8\obj\Debug\netstandard2.1\Assignment8.AssemblyInfo.cs
+C:\Users\aarsh.modi\Source\Repos\Assignment8\Assignment8\obj\Debug\netstandard2.1\Assignment8.csproj.CoreCompileInputs.cache
+C:\Users\aarsh.modi\Source\Repos\Assignment8\Assignment8\obj\Debug\netstandard2.1\Assignment8.dll
+C:\Users\aarsh.modi\Source\Repos\Assignment8\Assignment8\obj\Debug\netstandard2.1\Assignment8.pdb
